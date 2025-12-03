@@ -25,7 +25,14 @@ import React, { useState, useEffect } from 'react';
             <div className="flex items-center justify-between h-20">
               <a href="#" onClick={scrollToTop} className="flex-shrink-0 flex items-center gap-2 group cursor-pointer">
                 <Drum className="h-8 w-8 text-brand-accent group-hover:text-white transition-colors drop-shadow-[0_0_8px_rgba(139,92,246,0.8)]" />
-                <span className="font-display font-bold text-2xl tracking-tighter text-white">GRIMERKA<span className="text-brand-accent">96</span></span>
+                <div className="flex flex-row gap-0 items-stretch">
+                  <div className="bg-red-600 px-3 py-1.5 flex items-center">
+                    <span className="font-display font-bold text-xl tracking-tight text-yellow-400">ГРИМЕРКА</span>
+                  </div>
+                  <div className="bg-black px-3 py-1.5 flex items-center">
+                    <span className="font-display font-bold text-xl tracking-tight text-yellow-300">96</span>
+                  </div>
+                </div>
               </a>
               
               <div className="hidden md:block">

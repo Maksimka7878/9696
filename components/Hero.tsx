@@ -29,8 +29,13 @@ const Hero: React.FC = () => {
             </span>
         </div>
 
-        <h1 className="text-7xl md:text-[10rem] font-display font-bold text-white leading-none tracking-tighter mb-8 drop-shadow-2xl animate-scale-in">
-          GRIMERKA<span className="text-brand-accent">96</span>
+        <h1 className="text-7xl md:text-[10rem] font-display font-bold leading-none tracking-tighter mb-8 drop-shadow-2xl animate-scale-in flex flex-row items-center justify-center gap-0">
+          <div className="bg-red-600 px-6 md:px-12 py-3 md:py-6 flex items-center">
+            <span className="text-yellow-400 text-5xl md:text-[8rem]">ГРИМЕРКА</span>
+          </div>
+          <div className="bg-black px-6 md:px-12 py-3 md:py-6 flex items-center">
+            <span className="text-yellow-300 text-5xl md:text-[8rem]">96</span>
+          </div>
         </h1>
 
         <p className="text-gray-200 text-lg md:text-2xl max-w-2xl mx-auto mb-12 font-light leading-relaxed drop-shadow-lg animate-fadeIn" style={{ animationDelay: '0.3s' }}>
