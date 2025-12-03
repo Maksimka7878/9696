@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grimerka96 | Барабанное Шоу</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                black: '#0f0518', // Deep purple black
+                dark: '#1a0b2e', // Dark purple
+                gray: '#2e1065', // Dark violet gray
+                accent: '#8b5cf6', // Violet-500
+                accentHover: '#7c3aed', // Violet-600
+                text: '#e4e4e7',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Oswald', 'sans-serif'],
+            },
+            animation: {
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'spotlight': 'spotlight 4s ease-in-out infinite alternate',
+              'float-slow': 'float 6s ease-in-out infinite',
+              'float-slower': 'float 8s ease-in-out infinite reverse',
+              'fly-out': 'flyOut 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards',
+              'scale-in': 'scaleIn 0.8s ease-out forwards',
+            },
+            keyframes: {
+              spotlight: {
+                '0%': { opacity: 0.5, transform: 'rotate(-5deg)' },
+                '100%': { opacity: 0.8, transform: 'rotate(5deg)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+                '50%': { transform: 'translateY(-20px) rotate(2deg)' },
+              },
+              flyOut: {
+                '0%': { transform: 'translateX(0) rotate(0deg) scale(1)', opacity: '1' },
+                '20%': { transform: 'translateX(-40px) rotate(-5deg) scale(1.05)' }, /* Anticipation */
+                '100%': { transform: 'translateX(150vw) rotate(25deg) scale(1.1)', opacity: '1' }
+              },
+              scaleIn: {
+                '0%': { opacity: '0', transform: 'scale(0.8)' },
+                '100%': { opacity: '1', transform: 'scale(1)' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f0518;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4c1d95;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #8b5cf6;
+      }
+      
+      .text-metallic {
+        background: linear-gradient(to bottom, #e9d5ff 0%, #a855f7 50%, #4c1d95 51%, #a855f7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0px 4px 10px rgba(139, 92, 246, 0.5);
+      }
+
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .preserve-3d {
+        transform-style: preserve-3d;
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
+      }
+      .rotate-y-180 {
+        transform: rotateY(180deg);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-brand-black text-brand-text antialiased selection:bg-brand-accent selection:text-white overflow-x-hidden">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
