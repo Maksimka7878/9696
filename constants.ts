@@ -95,49 +95,49 @@ export const TRACKLIST_DATA: TrackItem[] = [
     id: 2,
     title: 'The Greatest Show',
     originalArtist: 'The Greatest Showman',
-    coverUrl: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=400&auto=format&fit=crop',
+    coverUrl: '/image/2.png',
     duration: '5:02'
   },
   {
     id: 3,
     title: 'Is This Love',
     originalArtist: 'Whitesnake',
-    coverUrl: 'https://images.unsplash.com/photo-1621360841013-c768371e93cf?q=80&w=400&auto=format&fit=crop',
+    coverUrl: '/image/3.png',
     duration: '4:43'
   },
   {
     id: 4,
     title: 'Gaia',
     originalArtist: 'Chris Coleman',
-    coverUrl: 'https://images.unsplash.com/photo-1468164016595-6108e4c60c8b?q=80&w=400&auto=format&fit=crop',
+    coverUrl: '/image/4.png',
     duration: '4:15'
   },
   {
     id: 5,
     title: 'Smoke on the Water',
     originalArtist: 'Deep Purple',
-    coverUrl: 'https://images.unsplash.com/photo-1542208998-f6dbbb27a72f?q=80&w=400&auto=format&fit=crop',
+    coverUrl: '/image/5.png',
     duration: '5:40'
   },
   {
     id: 6,
     title: 'Кукушка',
     originalArtist: 'Полина Гагарина',
-    coverUrl: 'https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=400&auto=format&fit=crop',
+    coverUrl: '/image/6.png',
     duration: '3:52'
   },
   {
     id: 7,
     title: 'Соло',
     originalArtist: 'Valery Voloshin',
-    coverUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=400&auto=format&fit=crop',
+    coverUrl: '/image/7.png',
     duration: '2:10'
   },
   {
     id: 8,
     title: "Cryin'",
     originalArtist: 'Aerosmith',
-    coverUrl: 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?q=80&w=400&auto=format&fit=crop',
+    coverUrl: '/image/8.png',
     duration: '5:08'
   }
 ];
