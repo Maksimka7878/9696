@@ -75,8 +75,49 @@ const Tracklist: React.FC = () => {
                    <div className="absolute top-4 right-4 w-[240px] h-[240px] rounded-full bg-black border-4 border-gray-800 flex items-center justify-center transition-transform duration-700 ease-out group-hover:translate-x-[40%] group-hover:rotate-180 opacity-0 group-hover:opacity-100 z-0">
                       <div className="absolute inset-0 rounded-full border border-white/10 opacity-50"></div>
                       <div className="absolute inset-4 rounded-full border border-white/5 opacity-50"></div>
-                      <div className="w-1/3 h-1/3 bg-brand-accent rounded-full flex items-center justify-center">
-                         <div className="w-2 h-2 bg-black rounded-full"></div>
+                      <div className="w-1/3 h-1/3 bg-brand-accent rounded-full flex items-center justify-center relative">
+                         {/* Drum Logo SVG */}
+                         <svg 
+                            className="w-full h-full p-3" 
+                            viewBox="0 0 100 100" 
+                            fill="none" 
+                            xmlns="http://www.w3.org/2000/svg"
+                         >
+                            {/* Drum body */}
+                            <ellipse 
+                               cx="50" 
+                               cy="50" 
+                               rx="35" 
+                               ry="20" 
+                               stroke="white" 
+                               strokeWidth="4" 
+                               fill="none"
+                            />
+                            {/* Drum side lines */}
+                            <line x1="15" y1="50" x2="15" y2="70" stroke="white" strokeWidth="3"/>
+                            <line x1="85" y1="50" x2="85" y2="70" stroke="white" strokeWidth="3"/>
+                            <line x1="20" y1="50" x2="20" y2="70" stroke="white" strokeWidth="2"/>
+                            <line x1="80" y1="50" x2="80" y2="70" stroke="white" strokeWidth="2"/>
+                            {/* Drumsticks - crossed */}
+                            <line 
+                               x1="30" 
+                               y1="30" 
+                               x2="70" 
+                               y2="70" 
+                               stroke="white" 
+                               strokeWidth="4" 
+                               strokeLinecap="round"
+                            />
+                            <line 
+                               x1="70" 
+                               y1="30" 
+                               x2="30" 
+                               y2="70" 
+                               stroke="white" 
+                               strokeWidth="4" 
+                               strokeLinecap="round"
+                            />
+                         </svg>
                       </div>
                    </div>
 

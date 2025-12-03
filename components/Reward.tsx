@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Copy, Check, Ticket, Award } from 'lucide-react';
+import { Copy, Check, Ticket } from 'lucide-react';
 
 const Reward: React.FC = () => {
   const [copied, setCopied] = useState(false);
@@ -44,8 +44,8 @@ const Reward: React.FC = () => {
 
                       {/* Center Label */}
                       <div className="w-16 h-16 md:w-20 md:h-20 bg-brand-accent rounded-full flex items-center justify-center shadow-lg relative z-20 border-[6px] border-[#111]">
-                          {/* Award Icon inside label */}
-                          <Award className="w-6 h-6 md:w-8 md:h-8 text-white drop-shadow-md" />
+                          {/* Number 96 inside label */}
+                          <span className="text-white text-2xl md:text-3xl font-display font-bold drop-shadow-md">96</span>
                       </div>
 
                       {/* Center Hole */}

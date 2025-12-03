@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Mail, Phone, Youtube, Send } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
@@ -39,13 +39,16 @@ const Contact: React.FC = () => {
 
             <div className="mt-12 flex gap-4">
               <a href="#" className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-brand-accent hover:border-brand-accent hover:shadow-[0_0_15px_rgba(139,92,246,0.6)] transition-all duration-300">
-                <Instagram className="w-5 h-5" />
+                <Send className="w-5 h-5" />
               </a>
               <a href="#" className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-brand-accent hover:border-brand-accent hover:shadow-[0_0_15px_rgba(139,92,246,0.6)] transition-all duration-300">
-                <Facebook className="w-5 h-5" />
+                <Youtube className="w-5 h-5" />
               </a>
               <a href="#" className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-brand-accent hover:border-brand-accent hover:shadow-[0_0_15px_rgba(139,92,246,0.6)] transition-all duration-300">
-                <Twitter className="w-5 h-5" />
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M8 12h8M12 8v8"/>
+                </svg>
               </a>
             </div>
           </div>
