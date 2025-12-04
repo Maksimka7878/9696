@@ -93,13 +93,13 @@ const Gallery: React.FC = () => {
 
         {/* Header (Fades out on scroll) */}
         <div 
-          className="absolute top-12 left-0 w-full text-center z-30 transition-opacity duration-500 pointer-events-none"
+          className="absolute top-8 md:top-12 left-0 w-full text-center z-30 transition-opacity duration-500 pointer-events-none px-4"
           style={{ opacity: Math.max(0, 1 - scrollProgress * 5) }}
         >
-          <div className="inline-block px-4 py-1 mb-4 border border-white/20 rounded-full bg-white/5 backdrop-blur">
+          <div className="inline-block px-4 py-1 mb-3 md:mb-4 border border-white/20 rounded-full bg-white/5 backdrop-blur">
              <span className="text-brand-accent text-xs font-bold uppercase tracking-[0.3em]">Галерея</span>
           </div>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-tight drop-shadow-[0_0_15px_rgba(139,92,246,0.6)]">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight drop-shadow-[0_0_15px_rgba(139,92,246,0.6)]">
             Завораживающая атмосфера <br />
             и вайб <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-purple-400">драм-культуры</span>
           </h2>
@@ -108,7 +108,7 @@ const Gallery: React.FC = () => {
         {/* Horizontal Track */}
         <div 
           ref={trackRef}
-          className="flex items-center gap-12 pl-[15vw] pr-[15vw] will-change-transform z-10 pt-20"
+          className="flex items-center gap-12 pl-[15vw] pr-[15vw] will-change-transform z-10 pt-32 md:pt-40"
           style={{ transform: `translateX(${xTransform}px)` }}
         >
           {/* Intro Text Card (First item in scroll) */}

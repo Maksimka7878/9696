@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-    import { Menu, X, Drum } from 'lucide-react';
+    import { Menu, X } from 'lucide-react';
     import { NAV_ITEMS } from '../constants';
     
     const Navbar: React.FC = () => {
@@ -23,15 +23,19 @@ import React, { useState, useEffect } from 'react';
         <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-brand-black/80 backdrop-blur-md border-b border-white/5 shadow-[0_0_20px_rgba(139,92,246,0.2)]' : 'bg-transparent'}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-20">
-              <a href="#" onClick={scrollToTop} className="flex-shrink-0 flex items-center gap-2 group cursor-pointer">
-                <Drum className="h-8 w-8 text-brand-accent group-hover:text-white transition-colors drop-shadow-[0_0_8px_rgba(139,92,246,0.8)]" />
-                <div className="flex flex-row gap-0 items-stretch">
-                  <div className="bg-red-600 px-3 py-1.5 flex items-center">
-                    <span className="font-display font-bold text-xl tracking-tight text-yellow-400">ГРИМЕРКА</span>
+              <a href="#" onClick={scrollToTop} className="flex-shrink-0 flex items-center gap-3 group cursor-pointer leading-none">
+                <div className="h-14 w-14 rounded-full bg-white/20 flex items-center justify-center drop-shadow-[0_0_18px_rgba(255,255,255,0.4)]">
+                  <img 
+                    src="/header-drum.svg" 
+                    alt="Voloshin drum logo" 
+                    className="h-12 w-12 object-contain brightness-125 contrast-110" 
+                  />
+                </div>
+                <div className="flex flex-row gap-2 items-center">
+                  <div className="bg-[#9f1e4f] flex items-center py-1.5 px-4">
+                    <span className="font-display font-bold text-xl tracking-tight text-yellow-400 leading-none inline-block translate-y-[4px] transform">ГРИМЕРКА</span>
                   </div>
-                  <div className="bg-black px-3 py-1.5 flex items-center">
-                    <span className="font-display font-bold text-xl tracking-tight text-yellow-300">96</span>
-                  </div>
+                  <span className="font-display font-bold text-lg tracking-tight text-yellow-300">96</span>
                 </div>
               </a>
               

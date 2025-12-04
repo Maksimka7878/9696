@@ -16,7 +16,7 @@ const Tracklist: React.FC = () => {
   };
 
   return (
-    <section id="tracklist" className="relative py-32 bg-[#0a0210] overflow-hidden">
+    <section id="tracklist" className="relative py-32 bg-[#1b0c2e] overflow-hidden">
       
       {/* --- Marquee Background --- */}
       <div className="absolute top-[10%] left-0 w-full overflow-hidden whitespace-nowrap opacity-[0.03] pointer-events-none select-none">

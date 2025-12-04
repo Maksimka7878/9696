@@ -89,7 +89,7 @@ const WhyVisit: React.FC = () => {
 
   return (
     // Height set to 400vh to allow enough scroll distance to flip through photos
-    <section ref={sectionRef} className="relative h-[400vh] bg-[#1a052a]">
+    <section ref={sectionRef} className="relative h-[400vh] bg-[#22103b]">
       
       {/* Sticky Container */}
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center">

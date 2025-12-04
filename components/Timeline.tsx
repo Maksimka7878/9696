@@ -125,7 +125,7 @@ const Timeline: React.FC = () => {
                     <div 
                       className={`
                         relative group
-                        bg-[#13071F] border border-white/5 p-6 md:p-8 rounded-2xl
+                        bg-[#24113d] border border-white/5 p-6 md:p-8 rounded-2xl
                         transition-all duration-700 transform
                         hover:bg-brand-accent/5 hover:border-brand-accent/30 hover:shadow-[0_0_30px_rgba(139,92,246,0.15)]
                         ${isVisible 
@@ -160,6 +160,20 @@ const Timeline: React.FC = () => {
 
           {/* Bottom Connector Fade */}
           <div className="absolute bottom-0 left-4 md:left-1/2 w-1 md:w-2 h-24 bg-gradient-to-t from-brand-black to-transparent transform md:-translate-x-1/2 ml-4 md:ml-0 z-20"></div>
+          
+          {/* FINAL NODE (Завершающий кружок) */}
+          <div className="absolute left-4 md:left-1/2 bottom-0 transform md:-translate-x-1/2 -translate-y-12 md:translate-y-0 w-12 h-12 ml-[-2px] md:ml-0 z-20 flex items-center justify-center">
+            {/* Outer Ring */}
+            <div className="absolute inset-0 rounded-full border-2 border-brand-accent scale-100 opacity-100 bg-brand-black"></div>
+            
+            {/* Inner Pulse */}
+            <div className="absolute inset-0 rounded-full bg-brand-accent/30 blur-md opacity-100 scale-150 animate-pulse"></div>
+            
+            {/* Icon Container */}
+            <div className="relative z-10 w-8 h-8 rounded-full flex items-center justify-center bg-brand-accent">
+              <div className="w-2 h-2 bg-white rounded-full"></div>
+            </div>
+          </div>
         </div>
 
       </div>

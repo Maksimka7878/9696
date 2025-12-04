@@ -3,7 +3,7 @@ import { Play } from 'lucide-react';
 
 const ShowAtmosphere: React.FC = () => {
   return (
-    <section className="py-24 bg-[#0a0210] relative overflow-hidden">
+    <section className="py-24 bg-[#190b2c] relative overflow-hidden">
       
       {/* Background Ambience */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-brand-black via-[#1a052a] to-brand-black opacity-80 z-0"></div>
