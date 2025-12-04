@@ -22,8 +22,8 @@ const About: React.FC = () => {
           {/* Left Column: Typography & Text */}
           <div className="space-y-10 relative z-20">
             <div className="relative">
-               <span className="absolute -top-12 left-0 text-[80px] md:text-[120px] font-display font-bold text-white/5 leading-none select-none -z-10 animate-pulse">NOISE</span>
-               <h2 className="text-5xl md:text-7xl font-display font-bold text-white leading-[0.9]">
+               <span className="absolute -top-12 left-0 text-[80px] md:text-[120px] font-display font-semibold text-white/5 leading-none select-none -z-10 animate-pulse">NOISE</span>
+               <h2 className="text-5xl md:text-7xl font-display font-semibold text-white leading-[0.9]">
                 БОЛЬШЕ ЧЕМ <br/>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-purple-400 drop-shadow-[0_0_20px_rgba(139,92,246,0.6)]">ПРОСТО ШУМ</span>
               </h2>
@@ -33,7 +33,7 @@ const About: React.FC = () => {
             
             <div className="text-gray-300 text-lg md:text-xl font-light leading-relaxed space-y-6">
               <p>
-                Grimerka96 — это индустриальный ритм, выкованный в 96-м. Мы не играем музыку, мы создаем <strong className="text-white font-bold">звуковую архитектуру</strong>.
+                Grimerka96 — это индустриальный ритм, выкованный в 96-м. Мы не играем музыку, мы создаем <strong className="text-white font-semibold">звуковую архитектуру</strong>.
               </p>
               <p>
                 Эксперименты с металлоломом переросли в шоу мирового уровня. Синхронная точность, визуальный спектакль и нефильтрованный адреналин.
@@ -45,16 +45,16 @@ const About: React.FC = () => {
                <div className="absolute inset-0 bg-brand-accent/5 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
                
                <div className="relative text-center border-r border-white/10">
-                  <div className="text-3xl md:text-4xl font-display font-bold text-white">04</div>
-                  <div className="text-[10px] uppercase tracking-widest text-brand-accent mt-1">Drummers</div>
+                  <div className="text-3xl md:text-4xl font-display font-semibold text-white">04</div>
+                  <div className="text-[10px] uppercase tracking-widest text-brand-accent mt-1">Участников</div>
                </div>
                <div className="relative text-center border-r border-white/10">
-                  <div className="text-3xl md:text-4xl font-display font-bold text-white">120+</div>
-                  <div className="text-[10px] uppercase tracking-widest text-brand-accent mt-1">Live Shows</div>
+                  <div className="text-3xl md:text-4xl font-display font-semibold text-white">120+</div>
+                  <div className="text-[10px] uppercase tracking-widest text-brand-accent mt-1">Концертов</div>
                </div>
                <div className="relative text-center">
-                  <div className="text-3xl md:text-4xl font-display font-bold text-white">∞</div>
-                  <div className="text-[10px] uppercase tracking-widest text-brand-accent mt-1">Energy</div>
+                  <div className="text-3xl md:text-4xl font-display font-semibold text-white">∞</div>
+                  <div className="text-[10px] uppercase tracking-widest text-brand-accent mt-1">Энергии</div>
                </div>
             </div>
           </div>

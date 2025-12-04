@@ -24,13 +24,13 @@ const Hero: React.FC = () => {
       <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="mb-6 animate-fadeIn">
-            <span className="text-brand-accent uppercase tracking-[0.5em] text-sm md:text-base font-bold drop-shadow-[0_0_10px_rgba(139,92,246,0.8)]">
+            <span className="text-brand-accent uppercase tracking-[0.5em] text-sm md:text-base font-semibold drop-shadow-[0_0_10px_rgba(139,92,246,0.8)]">
               Drum Percussion Show
             </span>
         </div>
 
         <div className="w-full flex flex-row flex-wrap items-center justify-center gap-6 md:gap-10 mb-6 animate-scale-in">
-          <h1 className="text-4xl md:text-[5rem] font-display font-bold leading-none tracking-tight drop-shadow-2xl flex flex-row items-center gap-2 md:gap-4">
+          <h1 className="text-4xl md:text-[5rem] font-display font-semibold leading-none tracking-tight drop-shadow-2xl flex flex-row items-center gap-2 md:gap-4">
             <div className="bg-[#9f1e4f] flex items-center py-2 md:py-4 px-4 md:px-6">
               <span className="text-yellow-400 text-3xl md:text-[4rem] tracking-tight leading-none inline-block translate-y-[4px] md:translate-y-[6px] transform">ГРИМЕРКА</span>
             </div>
@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col md:flex-row gap-6 justify-center items-center animate-fadeIn" style={{ animationDelay: '0.6s' }}>
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}
-              className="px-12 py-5 bg-brand-accent rounded-full font-bold font-display tracking-widest uppercase text-white shadow-[0_0_30px_rgba(139,92,246,0.4)] hover:shadow-[0_0_50px_rgba(139,92,246,0.6)] hover:bg-brand-accentHover transition-all duration-300 transform hover:-translate-y-1"
+              className="px-12 py-5 bg-brand-accent rounded-full font-semibold font-display tracking-widest uppercase text-white shadow-[0_0_30px_rgba(139,92,246,0.4)] hover:shadow-[0_0_50px_rgba(139,92,246,0.6)] hover:bg-brand-accentHover transition-all duration-300 transform hover:-translate-y-1"
             >
               КУПИТЬ БИЛЕТ
             </button>

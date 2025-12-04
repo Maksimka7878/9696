@@ -28,14 +28,14 @@ import React, { useState, useEffect } from 'react';
                   <img 
                     src="/header-drum.svg" 
                     alt="Voloshin drum logo" 
-                    className="h-12 w-12 object-contain brightness-125 contrast-110" 
+                    className="h-12 w-12 object-contain brightness-150 contrast-120" 
                   />
                 </div>
                 <div className="flex flex-row gap-2 items-center">
                   <div className="bg-[#9f1e4f] flex items-center py-1.5 px-4">
-                    <span className="font-display font-bold text-xl tracking-tight text-yellow-400 leading-none inline-block translate-y-[4px] transform">ГРИМЕРКА</span>
+                    <span className="font-display font-semibold text-xl tracking-tight text-yellow-400 leading-none inline-block translate-y-[4px] transform">ГРИМЕРКА</span>
                   </div>
-                  <span className="font-display font-bold text-lg tracking-tight text-yellow-300">96</span>
+                  <span className="font-display font-semibold text-lg tracking-tight text-yellow-300">96</span>
                 </div>
               </a>
               
@@ -45,7 +45,7 @@ import React, { useState, useEffect } from 'react';
                     <a
                       key={item.label}
                       href={item.href}
-                      className="font-display text-sm font-medium text-gray-300 hover:text-brand-accent transition-colors tracking-widest hover:drop-shadow-[0_0_5px_rgba(139,92,246,0.8)]"
+                      className="font-display text-sm font-semibold text-gray-300 hover:text-brand-accent transition-colors tracking-widest hover:drop-shadow-[0_0_5px_rgba(139,92,246,0.8)]"
                     >
                       {item.label}
                     </a>
@@ -80,7 +80,7 @@ import React, { useState, useEffect } from 'react';
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className={`block text-4xl font-display font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 hover:from-brand-accent hover:to-purple-400 transition-all duration-500 transform ${
+                  className={`block text-4xl font-display font-semibold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 hover:from-brand-accent hover:to-purple-400 transition-all duration-500 transform ${
                     isOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                   }`}
                   style={{ transitionDelay: `${index * 100}ms` }}

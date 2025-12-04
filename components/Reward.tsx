@@ -4,7 +4,7 @@ import { Copy, Check, Ticket } from 'lucide-react';
 
 const Reward: React.FC = () => {
   const [copied, setCopied] = useState(false);
-  const promoCode = "AWARD";
+  const promoCode = "GRM96";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(promoCode);
@@ -45,7 +45,7 @@ const Reward: React.FC = () => {
                       {/* Center Label */}
                       <div className="w-16 h-16 md:w-20 md:h-20 bg-brand-accent rounded-full flex items-center justify-center shadow-lg relative z-20 border-[6px] border-[#111]">
                           {/* Number 96 inside label */}
-                          <span className="text-white text-2xl md:text-3xl font-display font-bold drop-shadow-md">96</span>
+                          <span className="text-white text-2xl md:text-3xl font-display font-semibold drop-shadow-md">96</span>
                       </div>
 
                       {/* Center Hole */}
@@ -59,10 +59,10 @@ const Reward: React.FC = () => {
             {/* Content */}
             <div className="text-center md:text-left flex-grow">
               <div className="inline-block px-3 py-1 mb-4 border border-brand-accent/30 rounded-full bg-brand-accent/5">
-                 <span className="text-brand-accent text-xs font-bold tracking-[0.2em] uppercase">Secret Bonus</span>
+                 <span className="text-brand-accent text-xs font-semibold tracking-[0.2em] uppercase">Secret Bonus</span>
               </div>
               
-              <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4 leading-tight">
+              <h2 className="text-3xl md:text-5xl font-display font-semibold text-white mb-4 leading-tight">
                 ФИНАЛЬНЫЙ <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-400">ТРОФЕЙ</span>
               </h2>
@@ -79,7 +79,7 @@ const Reward: React.FC = () => {
                  >
                     <div className="text-left">
                        <span className="block text-[10px] text-gray-500 uppercase tracking-widest">Промокод</span>
-                       <span className="font-mono text-2xl font-bold text-white tracking-widest">{promoCode}</span>
+                       <span className="font-mono text-2xl font-semibold text-white tracking-widest">{promoCode}</span>
                     </div>
                     <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 text-gray-400 group-hover/code:text-white group-hover/code:bg-brand-accent transition-all">
                        {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
@@ -88,8 +88,8 @@ const Reward: React.FC = () => {
 
                  {/* Action Button */}
                  <button 
-                   onClick={() => document.getElementById('tour')?.scrollIntoView({behavior: 'smooth'})}
-                   className="w-full sm:w-auto px-8 py-4 bg-brand-accent text-white font-bold font-display uppercase tracking-widest rounded-xl hover:bg-brand-accentHover hover:shadow-[0_0_20px_rgba(139,92,246,0.4)] transition-all flex items-center justify-center gap-2"
+                   onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}
+                   className="w-full sm:w-auto px-8 py-4 bg-brand-accent text-white font-semibold font-display uppercase tracking-widest rounded-xl hover:bg-brand-accentHover hover:shadow-[0_0_20px_rgba(139,92,246,0.4)] transition-all flex items-center justify-center gap-2"
                  >
                    <Ticket className="w-5 h-5" />
                    Купить

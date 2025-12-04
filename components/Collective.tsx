@@ -54,9 +54,9 @@ const Collective: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block px-4 py-1 mb-4 border border-brand-accent/30 rounded-full bg-brand-accent/5 backdrop-blur-md">
-            <span className="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase animate-pulse">Команда</span>
+            <span className="text-brand-accent text-xs font-semibold tracking-[0.3em] uppercase animate-pulse">Команда</span>
           </div>
-          <h2 className="text-5xl md:text-7xl font-display font-bold text-white mb-6 uppercase tracking-tight">
+          <h2 className="text-5xl md:text-7xl font-display font-semibold text-white mb-6 uppercase tracking-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-purple-400 drop-shadow-[0_0_15px_rgba(139,92,246,0.5)]">КОЛЛЕКТИВ</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
@@ -92,11 +92,11 @@ const Collective: React.FC = () => {
 
               {/* Member Info */}
               <div className="text-center">
-                <h3 className="text-xl font-display font-bold text-white mb-2 group-hover:text-brand-accent transition-colors">
+                <h3 className="text-xl font-display font-semibold text-white mb-2 group-hover:text-brand-accent transition-colors">
                   {member.name}
                 </h3>
                 <div className="inline-block px-3 py-1 mb-3 bg-brand-accent/10 border border-brand-accent/30 rounded-full">
-                  <span className="text-xs text-brand-accent font-bold tracking-wider uppercase">
+                  <span className="text-xs text-brand-accent font-semibold tracking-wider uppercase">
                     {member.role}
                   </span>
                 </div>
@@ -112,25 +112,25 @@ const Collective: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
           <div className="bg-brand-gray/10 border border-white/5 p-6 rounded-xl text-center group hover:bg-brand-accent/5 hover:border-brand-accent/30 transition-all duration-300">
             <Users className="w-8 h-8 text-brand-accent mx-auto mb-3 group-hover:scale-110 transition-transform" />
-            <div className="text-3xl font-display font-bold text-white mb-1">04</div>
-            <div className="text-xs text-gray-400 uppercase tracking-wider">Участников</div>
+            <div className="text-3xl font-display font-semibold text-white mb-1">04</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wider">Участников</div>
           </div>
 
           <div className="bg-brand-gray/10 border border-white/5 p-6 rounded-xl text-center group hover:bg-brand-accent/5 hover:border-brand-accent/30 transition-all duration-300">
             <Music className="w-8 h-8 text-brand-accent mx-auto mb-3 group-hover:scale-110 transition-transform" />
-            <div className="text-3xl font-display font-bold text-white mb-1">120+</div>
-            <div className="text-xs text-gray-400 uppercase tracking-wider">Концертов</div>
+            <div className="text-3xl font-display font-semibold text-white mb-1">120+</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wider">Концертов</div>
           </div>
 
           <div className="bg-brand-gray/10 border border-white/5 p-6 rounded-xl text-center group hover:bg-brand-accent/5 hover:border-brand-accent/30 transition-all duration-300">
             <Award className="w-8 h-8 text-brand-accent mx-auto mb-3 group-hover:scale-110 transition-transform" />
-            <div className="text-3xl font-display font-bold text-white mb-1">28</div>
-            <div className="text-xs text-gray-400 uppercase tracking-wider">Лет опыта</div>
+            <div className="text-3xl font-display font-semibold text-white mb-1">28</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wider">Лет опыта</div>
           </div>
 
           <div className="bg-brand-gray/10 border border-white/5 p-6 rounded-xl text-center group hover:bg-brand-accent/5 hover:border-brand-accent/30 transition-all duration-300">
             <Zap className="w-8 h-8 text-brand-accent mx-auto mb-3 group-hover:scale-110 transition-transform" />
-            <div className="text-3xl font-display font-bold text-white mb-1">∞</div>
+            <div className="text-3xl font-display font-semibold text-white mb-1">∞</div>
             <div className="text-xs text-gray-400 uppercase tracking-wider">Энергии</div>
           </div>
         </div>

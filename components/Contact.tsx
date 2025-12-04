@@ -7,7 +7,7 @@ const Contact: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-4xl font-display font-bold text-white mb-6">
+            <h2 className="text-4xl font-display font-semibold text-white mb-6">
               БУКИНГ & <br/><span className="text-brand-accent">КОНТАКТЫ</span>
             </h2>
             <p className="text-gray-400 mb-8">
@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
                   <label className="block text-xs text-gray-500 uppercase tracking-widest mb-2">Сообщение</label>
                   <textarea rows={4} className="w-full bg-brand-black border-b border-white/20 p-2 text-white focus:outline-none focus:border-brand-accent transition-colors rounded-t"></textarea>
                 </div>
-                <button type="button" className="w-full py-4 bg-white text-brand-black font-bold font-display uppercase tracking-widest hover:bg-brand-accent hover:text-white transition-all hover:shadow-[0_0_20px_rgba(139,92,246,0.4)] rounded-lg">
+                <button type="button" className="w-full py-4 bg-white text-brand-black font-semibold font-display uppercase tracking-widest hover:bg-brand-accent hover:text-white transition-all hover:shadow-[0_0_20px_rgba(139,92,246,0.4)] rounded-lg">
                   Отправить
                 </button>
              </form>

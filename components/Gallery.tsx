@@ -97,9 +97,9 @@ const Gallery: React.FC = () => {
           style={{ opacity: Math.max(0, 1 - scrollProgress * 5) }}
         >
           <div className="inline-block px-4 py-1 mb-3 md:mb-4 border border-white/20 rounded-full bg-white/5 backdrop-blur">
-             <span className="text-brand-accent text-xs font-bold uppercase tracking-[0.3em]">Галерея</span>
+             <span className="text-brand-accent text-xs font-semibold uppercase tracking-[0.3em]">Галерея</span>
           </div>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight drop-shadow-[0_0_15px_rgba(139,92,246,0.6)]">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-semibold text-white leading-tight drop-shadow-[0_0_15px_rgba(139,92,246,0.6)]">
             Завораживающая атмосфера <br />
             и вайб <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-purple-400">драм-культуры</span>
           </h2>
@@ -113,7 +113,7 @@ const Gallery: React.FC = () => {
         >
           {/* Intro Text Card (First item in scroll) */}
           <div className="flex-shrink-0 w-[400px] h-[60vh] flex flex-col justify-center text-left pr-12 border-l-4 border-brand-accent pl-8">
-            <h3 className="text-5xl font-display font-bold text-white mb-6 leading-none">
+            <h3 className="text-5xl font-display font-semibold text-white mb-6 leading-none">
               ЭНЕРГИЯ <br/>В КАЖДОМ <br/><span className="text-brand-accent">КАДРЕ</span>
             </h3>
             <p className="text-gray-400 text-lg leading-relaxed">
@@ -153,10 +153,10 @@ const Gallery: React.FC = () => {
 
                 {/* Caption */}
                 <div className="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                   <div className="inline-block px-3 py-1 mb-3 text-[10px] font-bold tracking-[0.2em] uppercase text-white bg-brand-accent shadow-[0_0_10px_rgba(139,92,246,0.6)] rounded-sm">
+                   <div className="inline-block px-3 py-1 mb-3 text-[10px] font-semibold tracking-[0.2em] uppercase text-white bg-brand-accent shadow-[0_0_10px_rgba(139,92,246,0.6)] rounded-sm">
                     {item.type === 'image' ? 'PHOTO' : 'LIVE SET'}
                    </div>
-                   <h3 className="text-4xl font-display font-bold text-white uppercase drop-shadow-lg">{item.title}</h3>
+                   <h3 className="text-4xl font-display font-semibold text-white uppercase drop-shadow-lg">{item.title}</h3>
                 </div>
               </div>
             );
@@ -164,12 +164,12 @@ const Gallery: React.FC = () => {
 
           {/* Call to Action (Last item) */}
            <div className="flex-shrink-0 w-[500px] h-[60vh] flex flex-col justify-center items-center bg-brand-gray/10 rounded-[2rem] border border-white/10 backdrop-blur-sm ml-12">
-             <h3 className="text-4xl font-display font-bold text-white mb-8 text-center leading-tight">
+             <h3 className="text-4xl font-display font-semibold text-white mb-8 text-center leading-tight">
                ГОТОВ УВИДЕТЬ <br/>ЭТО <span className="text-brand-accent">ВЖИВУЮ?</span>
              </h3>
              <button 
                onClick={() => document.getElementById('tour')?.scrollIntoView({behavior: 'smooth'})}
-               className="px-12 py-6 bg-brand-accent text-white font-bold font-display tracking-widest uppercase rounded-full hover:bg-white hover:text-brand-black transition-all duration-300 shadow-[0_0_30px_rgba(139,92,246,0.5)] transform hover:scale-105"
+               className="px-12 py-6 bg-brand-accent text-white font-semibold font-display tracking-widest uppercase rounded-full hover:bg-white hover:text-brand-black transition-all duration-300 shadow-[0_0_30px_rgba(139,92,246,0.5)] transform hover:scale-105"
              >
                Купить Билет
              </button>

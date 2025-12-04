@@ -77,9 +77,9 @@ const Timeline: React.FC = () => {
         
         <div className="text-center mb-24 relative">
           <div className="inline-block px-4 py-1 mb-4 border border-brand-accent/30 rounded-full bg-brand-accent/5 backdrop-blur-md">
-             <span className="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase animate-pulse">Live History</span>
+             <span className="text-brand-accent text-xs font-semibold tracking-[0.3em] uppercase animate-pulse">Live History</span>
           </div>
-          <h2 className="text-5xl md:text-7xl font-display font-bold text-white mb-6 uppercase tracking-tight">
+          <h2 className="text-5xl md:text-7xl font-display font-semibold text-white mb-6 uppercase tracking-tight">
             Путь <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-purple-400 drop-shadow-[0_0_15px_rgba(139,92,246,0.5)]">Громкости</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
@@ -151,7 +151,7 @@ const Timeline: React.FC = () => {
                       <div className="absolute -bottom-[1px] -right-[1px] w-4 h-4 border-b border-r border-white/20 rounded-br-lg group-hover:border-brand-accent transition-colors"></div>
                       
                       {/* Year Badge */}
-                      <div className={`inline-block mb-3 px-3 py-1 bg-white/5 rounded border border-white/10 text-brand-accent font-display font-bold text-xl md:text-2xl shadow-inner group-hover:text-white group-hover:bg-brand-accent transition-all duration-300 ${isEven ? 'md:ml-auto' : ''}`}>
+                      <div className={`inline-block mb-3 px-3 py-1 bg-white/5 rounded border border-white/10 text-brand-accent font-display font-semibold text-xl md:text-2xl shadow-inner group-hover:text-white group-hover:bg-brand-accent transition-all duration-300 ${isEven ? 'md:ml-auto' : ''}`}>
                         {item.year}
                       </div>
                       

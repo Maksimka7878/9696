@@ -42,9 +42,9 @@ import React, { useState } from 'react';
               <div>
                 <div className="mb-6 flex items-center gap-2 text-brand-accent">
                   <Sparkles className="w-5 h-5 animate-pulse" />
-                  <span className="font-display tracking-widest text-sm font-bold">GEMINI AI POWERED</span>
+                  <span className="font-display tracking-widest text-sm font-semibold">GEMINI AI POWERED</span>
                 </div>
-                <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+                <h2 className="text-4xl md:text-5xl font-display font-semibold text-white mb-6">
                   AI КОМПОЗИТОР <br />РИТМОВ
                 </h2>
                 <p className="text-gray-400 mb-8">
@@ -64,7 +64,7 @@ import React, { useState } from 'react';
                   <button
                     type="submit"
                     disabled={loading || !mood}
-                    className="w-full bg-brand-accent hover:bg-brand-accentHover disabled:bg-gray-800 disabled:cursor-not-allowed text-white font-bold py-4 px-8 tracking-widest transition-all duration-300 flex justify-center items-center gap-2 rounded-lg shadow-[0_0_20px_rgba(139,92,246,0.4)] hover:shadow-[0_0_30px_rgba(139,92,246,0.6)]"
+                    className="w-full bg-brand-accent hover:bg-brand-accentHover disabled:bg-gray-800 disabled:cursor-not-allowed text-white font-semibold py-4 px-8 tracking-widest transition-all duration-300 flex justify-center items-center gap-2 rounded-lg shadow-[0_0_20px_rgba(139,92,246,0.4)] hover:shadow-[0_0_30px_rgba(139,92,246,0.6)]"
                   >
                     {loading ? (
                       <>
@@ -104,15 +104,15 @@ import React, { useState } from 'react';
                   <div className="animate-fadeIn space-y-6">
                     <div className="border-b border-white/10 pb-4">
                       <span className="text-brand-accent text-xs tracking-widest uppercase">Обнаруженный Вайб</span>
-                      <h3 className="text-2xl text-white font-display font-bold uppercase drop-shadow-[0_0_5px_rgba(139,92,246,0.8)]">{result.vibe}</h3>
+                      <h3 className="text-2xl text-white font-display font-semibold uppercase drop-shadow-[0_0_5px_rgba(139,92,246,0.8)]">{result.vibe}</h3>
                     </div>
     
                     <div className="space-y-4">
                       {result.songs.map((song, idx) => (
                         <div key={idx} className="flex gap-4 items-start group">
-                          <span className="text-brand-accent font-display font-bold text-xl opacity-70">0{idx + 1}</span>
+                          <span className="text-brand-accent font-display font-semibold text-xl opacity-70">0{idx + 1}</span>
                           <div>
-                            <h4 className="text-white font-bold group-hover:text-brand-accent transition-colors">{song.title}</h4>
+                            <h4 className="text-white font-semibold group-hover:text-brand-accent transition-colors">{song.title}</h4>
                             <p className="text-gray-400 text-sm">{song.description}</p>
                             <span className="text-xs text-brand-accent border border-brand-accent/30 px-2 py-0.5 mt-2 inline-block rounded-full bg-brand-accent/5">{song.tempo}</span>
                           </div>
@@ -121,7 +121,7 @@ import React, { useState } from 'react';
                     </div>
     
                     <div className="mt-6 bg-brand-black/60 p-4 border-l-2 border-brand-accent rounded-r-lg">
-                      <div className="flex items-center gap-2 mb-2 text-white font-bold text-sm uppercase tracking-widest">
+                      <div className="flex items-center gap-2 mb-2 text-white font-semibold text-sm uppercase tracking-widest">
                         <Lightbulb className="w-4 h-4 text-yellow-400 drop-shadow-[0_0_5px_rgba(250,204,21,0.8)]" /> Свет
                       </div>
                       <p className="text-gray-300 text-sm italic">{result.lightingSuggestion}</p>

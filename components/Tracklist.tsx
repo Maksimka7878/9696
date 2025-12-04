@@ -21,15 +21,15 @@ const Tracklist: React.FC = () => {
       {/* --- Marquee Background --- */}
       <div className="absolute top-[10%] left-0 w-full overflow-hidden whitespace-nowrap opacity-[0.03] pointer-events-none select-none">
         <div className="inline-block animate-[float-slow_20s_linear_infinite]" style={{ animationDuration: '30s' }}>
-          <span className="text-[15rem] font-display font-bold uppercase text-white">SETLIST • TRACKLIST • HITS • </span>
-          <span className="text-[15rem] font-display font-bold uppercase text-white">SETLIST • TRACKLIST • HITS • </span>
+          <span className="text-[15rem] font-display font-semibold uppercase text-white">SETLIST • TRACKLIST • HITS • </span>
+          <span className="text-[15rem] font-display font-semibold uppercase text-white">SETLIST • TRACKLIST • HITS • </span>
         </div>
       </div>
       
       <div className="absolute bottom-[10%] left-0 w-full overflow-hidden whitespace-nowrap opacity-[0.03] pointer-events-none select-none">
         <div className="inline-block animate-[float-slower_25s_linear_infinite]" style={{ animationDuration: '35s' }}>
-           <span className="text-[15rem] font-display font-bold uppercase text-white">GRIMERKA96 • DRUM SHOW • LIVE • </span>
-           <span className="text-[15rem] font-display font-bold uppercase text-white">GRIMERKA96 • DRUM SHOW • LIVE • </span>
+           <span className="text-[15rem] font-display font-semibold uppercase text-white">GRIMERKA96 • DRUM SHOW • LIVE • </span>
+           <span className="text-[15rem] font-display font-semibold uppercase text-white">GRIMERKA96 • DRUM SHOW • LIVE • </span>
         </div>
       </div>
 
@@ -39,9 +39,9 @@ const Tracklist: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
           <div className="text-left">
             <div className="inline-block px-4 py-1 mb-4 border border-brand-accent/30 rounded-full bg-brand-accent/5 backdrop-blur-md">
-                <span className="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase animate-pulse">Event Music</span>
+                <span className="text-brand-accent text-xs font-semibold tracking-[0.3em] uppercase animate-pulse">Музыка Событий</span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-display font-bold text-white mb-2 leading-tight">
+            <h2 className="text-5xl md:text-6xl font-display font-semibold text-white mb-2 leading-tight">
               ТРЕК-ЛИСТ <br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-purple-400 drop-shadow-[0_0_15px_rgba(139,92,246,0.5)]">МЕРОПРИЯТИЯ</span>
             </h2>
@@ -96,7 +96,7 @@ const Tracklist: React.FC = () => {
                    {/* Track Info */}
                    <div className="relative z-10 px-2">
                       <div className="flex justify-between items-start mb-2">
-                         <h3 className="text-2xl font-display font-bold text-white truncate pr-2 group-hover:text-brand-accent transition-colors">{track.title}</h3>
+                         <h3 className="text-2xl font-display font-semibold text-white truncate pr-2 group-hover:text-brand-accent transition-colors">{track.title}</h3>
                          <span className="text-xs font-mono text-gray-500 border border-gray-700 rounded px-1.5 py-0.5 mt-1">{track.duration}</span>
                       </div>
                       <div className="flex items-center gap-2 text-gray-400 text-sm">

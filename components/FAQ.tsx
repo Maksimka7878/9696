@@ -21,11 +21,11 @@ const FAQ: React.FC = () => {
         
         <div className="text-center mb-16">
           <div className="inline-block px-4 py-1 mb-4 border border-brand-accent/30 rounded-full bg-brand-accent/5 backdrop-blur-md">
-             <span className="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase flex items-center gap-2">
+             <span className="text-brand-accent text-xs font-semibold tracking-[0.3em] uppercase flex items-center gap-2">
                <HelpCircle className="w-3 h-3" /> FAQ
              </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-white uppercase drop-shadow-[0_0_15px_rgba(139,92,246,0.6)]">
+          <h2 className="text-4xl md:text-5xl font-display font-semibold text-white uppercase drop-shadow-[0_0_15px_rgba(139,92,246,0.6)]">
             Вопрос - <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-purple-400">Ответ</span>
           </h2>
         </div>
