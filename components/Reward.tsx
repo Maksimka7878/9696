@@ -13,7 +13,7 @@ const Reward: React.FC = () => {
   };
 
   return (
-    <section className="relative py-32 bg-brand-black overflow-hidden">
+    <section className="relative py-32 bg-[#1a0a2b] overflow-hidden">
       
       {/* Abstract Background Elements */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-accent/10 rounded-full blur-[100px] pointer-events-none"></div>

@@ -52,7 +52,17 @@ const Timeline: React.FC = () => {
   }, []);
 
   return (
-    <section id="timeline" className="bg-brand-black py-32 overflow-hidden relative min-h-screen">
+    <section id="timeline" className="bg-[#1a0a2b] py-32 overflow-hidden relative min-h-screen">
+      <style>{`
+        .active-cable-max {
+          max-height: calc(100% - 64px);
+        }
+        @media (min-width: 768px) {
+          .active-cable-max {
+            max-height: calc(100% - 16px);
+          }
+        }
+      `}</style>
       
       {/* Background Ambience */}
       <div className="absolute inset-0 pointer-events-none">
@@ -81,15 +91,17 @@ const Timeline: React.FC = () => {
         <div className="relative">
           
           {/* CENTRAL CABLE (Background Gray) */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 md:w-2 bg-white/10 rounded-full transform md:-translate-x-1/2 ml-4 md:ml-0"></div>
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 md:w-2 bg-white/10 rounded-full transform md:-translate-x-1/2 ml-4 md:ml-0 z-0"></div>
           
           {/* ACTIVE CABLE (Glowing Purple) */}
           <div 
-            className="absolute left-4 md:left-1/2 top-0 w-1 md:w-2 bg-brand-accent rounded-full transform md:-translate-x-1/2 ml-4 md:ml-0 transition-all duration-100 ease-out shadow-[0_0_20px_rgba(139,92,246,0.8)]"
-            style={{ height: `${scrollProgress * 100}%` }}
+            className="absolute left-4 md:left-1/2 top-0 w-1 md:w-2 bg-brand-accent rounded-full transform md:-translate-x-1/2 ml-4 md:ml-0 transition-all duration-100 ease-out shadow-[0_0_20px_rgba(139,92,246,0.8)] z-10 active-cable-max"
+            style={{ 
+              height: `${scrollProgress * 100}%`
+            }}
           >
             {/* The "Head" of the cable */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-4 h-4 bg-white rounded-full shadow-[0_0_20px_white]"></div>
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-4 h-4 bg-white rounded-full shadow-[0_0_20px_white] z-50"></div>
           </div>
 
           <div className="space-y-12 md:space-y-24 pb-24">
@@ -125,7 +137,7 @@ const Timeline: React.FC = () => {
                     <div 
                       className={`
                         relative group
-                        bg-[#24113d] border border-white/5 p-6 md:p-8 rounded-2xl
+                        bg-[#13071F] border border-white/5 p-6 md:p-8 rounded-2xl
                         transition-all duration-700 transform
                         hover:bg-brand-accent/5 hover:border-brand-accent/30 hover:shadow-[0_0_30px_rgba(139,92,246,0.15)]
                         ${isVisible 
@@ -159,10 +171,10 @@ const Timeline: React.FC = () => {
           </div>
 
           {/* Bottom Connector Fade */}
-          <div className="absolute bottom-0 left-4 md:left-1/2 w-1 md:w-2 h-24 bg-gradient-to-t from-brand-black to-transparent transform md:-translate-x-1/2 ml-4 md:ml-0 z-20"></div>
+          <div className="absolute bottom-0 left-4 md:left-1/2 w-1 md:w-2 h-24 bg-gradient-to-t from-[#1a0a2b] to-transparent transform md:-translate-x-1/2 ml-4 md:ml-0 z-20"></div>
           
           {/* FINAL NODE (Завершающий кружок) */}
-          <div className="absolute left-4 md:left-1/2 bottom-0 transform md:-translate-x-1/2 -translate-y-12 md:translate-y-0 w-12 h-12 ml-[-2px] md:ml-0 z-20 flex items-center justify-center">
+          <div className="absolute left-4 md:left-1/2 bottom-0 transform md:-translate-x-1/2 -translate-y-12 md:translate-y-0 w-12 h-12 ml-[-2px] md:ml-0 z-40 flex items-center justify-center">
             {/* Outer Ring */}
             <div className="absolute inset-0 rounded-full border-2 border-brand-accent scale-100 opacity-100 bg-brand-black"></div>
             

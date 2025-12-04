@@ -53,31 +53,45 @@ import React, { useState, useEffect } from 'react';
                 </div>
               </div>
               
-              <div className="-mr-2 flex md:hidden">
+              <div className="-mr-2 flex md:hidden relative z-50">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
-                  className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none"
+                  className="inline-flex items-center justify-center p-2 rounded-full text-white hover:text-brand-accent transition-all duration-300 focus:outline-none hover:rotate-90"
                 >
-                  {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                  {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
                 </button>
               </div>
             </div>
           </div>
     
-          {/* Mobile Menu */}
-          <div className={`md:hidden absolute top-20 left-0 w-full bg-brand-black border-b border-white/10 transition-all duration-300 ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {NAV_ITEMS.map((item) => (
+          {/* Mobile Menu Overlay */}
+          <div 
+            className={`md:hidden fixed inset-0 z-40 bg-brand-black/95 backdrop-blur-xl transition-all duration-500 ease-in-out ${
+              isOpen ? 'opacity-100 visible translate-x-0' : 'opacity-0 invisible translate-x-full'
+            }`}
+          >
+            {/* Background Elements */}
+            <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-brand-accent/10 rounded-full blur-[100px] pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-purple-900/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div className="flex flex-col items-center justify-center h-full space-y-8 p-8">
+              {NAV_ITEMS.map((item, index) => (
                 <a
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="block px-3 py-4 text-base font-medium text-center text-gray-300 hover:text-brand-accent hover:bg-white/5 font-display tracking-widest border-b border-white/5"
+                  className={`block text-4xl font-display font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 hover:from-brand-accent hover:to-purple-400 transition-all duration-500 transform ${
+                    isOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                  }`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   {item.label}
                 </a>
               ))}
             </div>
+
+            {/* Decorative line at bottom */}
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-1/3 h-1 bg-gradient-to-r from-transparent via-brand-accent/50 to-transparent rounded-full"></div>
           </div>
         </nav>
       );

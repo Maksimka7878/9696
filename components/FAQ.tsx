@@ -11,7 +11,7 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-24 bg-[#1a0a2b] relative overflow-hidden">
+    <section id="faq" className="py-24 bg-[#1f0d2e] relative overflow-hidden">
       
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-accent/5 rounded-full blur-[120px] pointer-events-none transform translate-x-1/3 -translate-y-1/3"></div>

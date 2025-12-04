@@ -73,10 +73,10 @@ const Gallery: React.FC = () => {
 
   return (
     // Height set to 500vh to ensure a long, deliberate scroll lock
-    <section ref={sectionRef} id="media" className="relative h-[500vh] bg-brand-black">
+    <section ref={sectionRef} id="media" className="relative h-[500vh] bg-[#1a0a2b]">
       
       {/* Sticky Viewport - This div stays fixed while you scroll through the 500vh of the parent section */}
-      <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-center bg-brand-black perspective-1000">
+      <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-center bg-[#1a0a2b] perspective-1000">
         
         {/* === SPOTLIGHTS === */}
         {/* Left Spotlight Beam */}
@@ -89,7 +89,7 @@ const Gallery: React.FC = () => {
         <div className="absolute bottom-0 right-[20%] w-[20vw] h-[10vh] bg-purple-500/20 blur-[40px] rounded-[100%] z-10"></div>
 
         {/* Ambient Back Glow */}
-        <div className="absolute top-0 left-0 w-full h-2/3 bg-gradient-to-b from-[#1a0b2e] via-[#0f0518] to-brand-black z-0"></div>
+        <div className="absolute top-0 left-0 w-full h-2/3 bg-gradient-to-b from-[#1a0b2e] via-[#15071f] to-[#1a0a2b] z-0"></div>
 
         {/* Header (Fades out on scroll) */}
         <div 

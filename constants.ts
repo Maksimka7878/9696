@@ -14,7 +14,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'ТРЕК-ЛИСТ', href: '#tracklist' },
   { label: 'ИСТОРИЯ', href: '#timeline' },
   { label: 'МЕДИА', href: '#media' },
-  { label: 'ТУР', href: '#tour' },
+  { label: 'КОЛЛЕКТИВ', href: '#collective' },
   { label: 'FAQ', href: '#faq' },
   { label: 'КОНТАКТЫ', href: '#contact' },
 ];

@@ -5,8 +5,8 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Timeline from './components/Timeline';
 import Gallery from './components/Gallery';
-import Tour from './components/Tour';
 import ShowAtmosphere from './components/ShowAtmosphere';
+import Collective from './components/Collective';
 import Contact from './components/Contact';
 import WhyVisit from './components/WhyVisit';
 import Tracklist from './components/Tracklist';
@@ -24,8 +24,8 @@ const App: React.FC = () => {
         <WhyVisit />
         <Timeline />
         <Gallery />
-        <Tour />
         <ShowAtmosphere />
+        <Collective />
         <FAQ />
         <Reward />
         <Contact />

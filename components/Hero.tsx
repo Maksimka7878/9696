@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
         
         <div className="flex flex-col md:flex-row gap-6 justify-center items-center animate-fadeIn" style={{ animationDelay: '0.6s' }}>
             <button 
-              onClick={() => document.getElementById('tour')?.scrollIntoView({behavior: 'smooth'})}
+              onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}
               className="px-12 py-5 bg-brand-accent rounded-full font-bold font-display tracking-widest uppercase text-white shadow-[0_0_30px_rgba(139,92,246,0.4)] hover:shadow-[0_0_50px_rgba(139,92,246,0.6)] hover:bg-brand-accentHover transition-all duration-300 transform hover:-translate-y-1"
             >
               КУПИТЬ БИЛЕТ

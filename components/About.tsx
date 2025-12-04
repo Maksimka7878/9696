@@ -2,11 +2,11 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-32 bg-brand-black relative overflow-hidden min-h-screen flex items-center">
+    <section id="about" className="py-32 bg-[#1a0a2b] relative overflow-hidden min-h-screen flex items-center">
       
       {/* Background Grid & Texture */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px] opacity-20"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-black via-transparent to-brand-black"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#1a0a2b] via-transparent to-[#1a0a2b]"></div>
 
       {/* Floating Drum Elements (Simulated 3D) */}
       <div className="absolute top-20 right-[-10%] w-[500px] h-[500px] opacity-20 animate-float-slow pointer-events-none mix-blend-screen hidden md:block">
@@ -66,7 +66,7 @@ const About: React.FC = () => {
              <div className="absolute inset-4 md:inset-12 z-20 bg-brand-black border border-white/10 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 overflow-hidden group">
                 <div className="absolute inset-0 bg-brand-accent/20 z-10 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <img 
-                  src="https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=800&auto=format&fit=crop" 
+                  src="/image/preview.png" 
                   alt="Band Performance" 
                   className="w-full h-full object-cover filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700" 
                 />

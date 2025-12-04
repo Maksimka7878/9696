@@ -3,7 +3,7 @@ import { Mail, Phone, Youtube, Send } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="bg-brand-black pt-24 pb-12 border-t border-white/5">
+    <section id="contact" className="bg-[#1a0a2b] pt-24 pb-12 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div>
