@@ -191,10 +191,9 @@ const Leader: React.FC = () => {
           {/* Left Column: Photo/Visual */}
           <div className="relative order-2 lg:order-1">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 relative group">
-              {/* Placeholder for Leader Photo - using a generic drummer image for now if specific one isn't available, or reuse an existing one */}
               <div className="absolute inset-0 bg-brand-accent/20 z-10 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500"></div>
               <img 
-                src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?q=80&w=800&auto=format&fit=crop" 
+                src="/image/VV.jpg" 
                 alt="Валерий Волошин" 
                 className="w-full h-full object-cover filter contrast-125 saturate-0 group-hover:saturate-100 transition-all duration-700" 
               />
