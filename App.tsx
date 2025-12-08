@@ -7,6 +7,7 @@ import Timeline from './components/Timeline';
 import Gallery from './components/Gallery';
 import ShowAtmosphere from './components/ShowAtmosphere';
 import Collective from './components/Collective';
+import Leader from './components/Leader';
 import Contact from './components/Contact';
 import WhyVisit from './components/WhyVisit';
 import Tracklist from './components/Tracklist';
@@ -26,6 +27,7 @@ const App: React.FC = () => {
         <Gallery />
         <ShowAtmosphere />
         <Collective />
+        <Leader />
         <FAQ />
         <Reward />
         <Contact />

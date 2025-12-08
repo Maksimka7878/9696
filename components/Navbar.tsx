@@ -7,6 +7,14 @@ import React, { useState, useEffect } from 'react';
       const [scrolled, setScrolled] = useState(false);
     
       useEffect(() => {
+        if (isOpen) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = 'unset';
+        }
+      }, [isOpen]);
+
+      useEffect(() => {
         const handleScroll = () => {
           setScrolled(window.scrollY > 50);
         };
@@ -20,80 +28,93 @@ import React, { useState, useEffect } from 'react';
       };
     
       return (
-        <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-brand-black/80 backdrop-blur-md border-b border-white/5 shadow-[0_0_20px_rgba(139,92,246,0.2)]' : 'bg-transparent'}`}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-20">
-              <a href="#" onClick={scrollToTop} className="flex-shrink-0 flex items-center gap-3 group cursor-pointer leading-none">
-                <div className="h-14 w-14 rounded-full bg-white/20 flex items-center justify-center drop-shadow-[0_0_18px_rgba(255,255,255,0.4)]">
-                  <img 
-                    src="/header-drum.svg" 
-                    alt="Voloshin drum logo" 
-                    className="h-12 w-12 object-contain brightness-150 contrast-120" 
-                  />
-                </div>
-                <div className="flex flex-row gap-2 items-center">
-                  <div className="bg-[#9f1e4f] flex items-center py-1.5 px-4">
-                    <span className="font-display font-semibold text-xl tracking-tight text-yellow-400 leading-none inline-block translate-y-[4px] transform">ГРИМЕРКА</span>
-                  </div>
-                  <span className="font-display font-semibold text-lg tracking-tight text-yellow-300">96</span>
-                </div>
-              </a>
-              
-              <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-8">
-                  {NAV_ITEMS.map((item) => (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      className="font-display text-sm font-semibold text-gray-300 hover:text-brand-accent transition-colors tracking-widest hover:drop-shadow-[0_0_5px_rgba(139,92,246,0.8)]"
-                    >
-                      {item.label}
-                    </a>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="-mr-2 flex md:hidden relative z-50">
-                <button
-                  onClick={() => setIsOpen(!isOpen)}
-                  className="inline-flex items-center justify-center p-2 rounded-full text-white hover:text-brand-accent transition-all duration-300 focus:outline-none hover:rotate-90"
-                >
-                  {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
-                </button>
-              </div>
-            </div>
-          </div>
-    
-          {/* Mobile Menu Overlay */}
+        <>
+          {/* Mobile Menu Overlay - вынесен за пределы nav */}
           <div 
-            className={`md:hidden fixed inset-0 z-40 bg-brand-black/95 backdrop-blur-xl transition-all duration-500 ease-in-out ${
-              isOpen ? 'opacity-100 visible translate-x-0' : 'opacity-0 invisible translate-x-full'
+            className={`md:hidden fixed inset-0 z-[200] bg-brand-black transition-all duration-500 ease-in-out overflow-y-auto ${
+              isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
             }`}
           >
             {/* Background Elements */}
             <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-brand-accent/10 rounded-full blur-[100px] pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-purple-900/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-            <div className="flex flex-col items-center justify-center h-full space-y-8 p-8">
+            {/* Close Button inside overlay */}
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-4 right-4 p-2 rounded-full text-white hover:text-brand-accent transition-all duration-300 focus:outline-none z-10"
+            >
+              <X className="h-8 w-8" />
+            </button>
+
+            <div className="flex flex-col items-center justify-center h-full space-y-6 p-8 relative">
               {NAV_ITEMS.map((item, index) => (
                 <a
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className={`block text-4xl font-display font-semibold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 hover:from-brand-accent hover:to-purple-400 transition-all duration-500 transform ${
+                  className={`block text-2xl font-display font-semibold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 hover:from-brand-accent hover:to-purple-400 transition-all duration-500 transform ${
                     isOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                   }`}
-                  style={{ transitionDelay: `${index * 100}ms` }}
+                  style={{ transitionDelay: `${index * 80}ms` }}
                 >
                   {item.label}
                 </a>
               ))}
+
+              {/* Mobile Contacts Info */}
+              <div className={`mt-8 text-center transition-all duration-700 delay-500 ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <div className="flex flex-col gap-3 items-center">
+                   <a href="tel:+79990009696" className="text-gray-400 hover:text-brand-accent transition-colors font-display tracking-wider text-lg">
+                     +7 (999) 000-96-96
+                   </a>
+                   <a href="mailto:booking@grimerka96.com" className="text-gray-400 hover:text-brand-accent transition-colors font-sans text-xs uppercase tracking-widest">
+                     booking@grimerka96.com
+                   </a>
+                </div>
+              </div>
             </div>
 
             {/* Decorative line at bottom */}
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-1/3 h-1 bg-gradient-to-r from-transparent via-brand-accent/50 to-transparent rounded-full"></div>
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-1/3 h-1 bg-gradient-to-r from-transparent via-brand-accent/50 to-transparent rounded-full"></div>
           </div>
-        </nav>
+
+          {/* Navbar */}
+          <nav className={`fixed top-0 w-full z-[150] transition-all duration-300 ${scrolled ? 'bg-brand-black/80 backdrop-blur-md border-b border-white/5 shadow-[0_0_20px_rgba(139,92,246,0.2)]' : 'bg-transparent'}`}>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex items-center justify-between md:justify-center h-16 md:h-20 relative">
+                
+                {/* Mobile Logo */}
+                <a href="#hero" className="md:hidden">
+                  <span className="font-display font-semibold text-lg tracking-widest text-white">ГЛАВНАЯ</span>
+                </a>
+
+                {/* Desktop Nav */}
+                <div className="hidden md:block">
+                  <div className="flex items-baseline space-x-8">
+                    {NAV_ITEMS.map((item) => (
+                      <a
+                        key={item.label}
+                        href={item.href}
+                        className="font-display text-sm font-semibold text-gray-300 hover:text-brand-accent transition-colors tracking-widest hover:drop-shadow-[0_0_5px_rgba(139,92,246,0.8)]"
+                      >
+                        {item.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Mobile Burger Button */}
+                <button
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="md:hidden inline-flex items-center justify-center p-2 rounded-full text-white hover:text-brand-accent transition-all duration-300 focus:outline-none"
+                >
+                  <Menu className="h-7 w-7" />
+                </button>
+              </div>
+            </div>
+          </nav>
+        </>
       );
     };
     

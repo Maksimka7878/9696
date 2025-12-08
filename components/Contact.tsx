@@ -80,9 +80,10 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-20 pt-8 border-t border-white/10 text-center text-gray-600 text-sm">
-          <p>© 2025 GRIMERKA96. ВСЕ ПРАВА ЗАЩИЩЕНЫ. СОЗДАНО ДЛЯ АНДЕГРАУНДА.</p>
-        </div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 pt-8 border-t border-white/10 text-center text-gray-600 text-sm">
+        <p>© 2025 GRIMERKA96. ВСЕ ПРАВА ЗАЩИЩЕНЫ. СОЗДАНО ДЛЯ АНДЕГРАУНДА.</p>
       </div>
     </section>
   );

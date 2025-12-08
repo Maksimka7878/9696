@@ -45,7 +45,7 @@ const About: React.FC = () => {
                <div className="absolute inset-0 bg-brand-accent/5 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
                
                <div className="relative text-center border-r border-white/10">
-                  <div className="text-3xl md:text-4xl font-display font-semibold text-white">04</div>
+                  <div className="text-3xl md:text-4xl font-display font-semibold text-white">07</div>
                   <div className="text-[10px] uppercase tracking-widest text-brand-accent mt-1">Участников</div>
                </div>
                <div className="relative text-center border-r border-white/10">
@@ -60,15 +60,15 @@ const About: React.FC = () => {
           </div>
           
           {/* Right Column: Visual Composition */}
-          <div className="relative h-[500px] md:h-[600px] w-full perspective-1000 mt-12 lg:mt-0">
+          <div className="relative h-[300px] sm:h-[400px] md:h-[600px] w-full perspective-1000 mt-12 lg:mt-0">
              
              {/* Center Image (Main Band) */}
-             <div className="absolute inset-4 md:inset-12 z-20 bg-brand-black border border-white/10 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 overflow-hidden group">
+             <div className="absolute inset-0 sm:inset-4 md:inset-12 z-20 bg-brand-black border border-white/10 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 overflow-hidden group">
                 <div className="absolute inset-0 bg-brand-accent/20 z-10 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <img 
                   src="/image/preview.png" 
                   alt="Band Performance" 
-                  className="w-full h-full object-cover filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700" 
+                  className="w-full h-full object-cover object-top filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700" 
                 />
                 
                 {/* Overlay UI elements */}

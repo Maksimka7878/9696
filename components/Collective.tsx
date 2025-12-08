@@ -14,30 +14,51 @@ const Collective: React.FC = () => {
     {
       id: 1,
       name: 'Валерий Волошин',
-      role: 'Основатель & Лидер',
+      role: 'Худ. Рук., Зачинатель',
       description: 'Мастер ритма с 1996 года. Создатель уникального звука Grimerka96.',
-      photoUrl: undefined // Можно указать путь к фото, например: '/image/member1.jpg'
+      photoUrl: undefined
     },
     {
       id: 2,
-      name: 'Алексей Ритмов',
-      role: 'Ударные',
-      description: 'Специалист по индустриальным перкуссиям и синхронизации.',
-      photoUrl: undefined // Можно указать путь к фото, например: '/image/member2.jpg'
+      name: 'Глеб Пестриков',
+      role: 'Участник',
+      description: 'Ударные инструменты',
+      photoUrl: undefined
     },
     {
       id: 3,
-      name: 'Дмитрий Барабан',
-      role: 'Ударные',
-      description: 'Эксперт по электронным сэмплам и световому шоу.',
-      photoUrl: undefined // Можно указать путь к фото, например: '/image/member3.jpg'
+      name: 'Мария Пономарева',
+      role: 'Участник',
+      description: 'Перкуссия и ритм',
+      photoUrl: undefined
     },
     {
       id: 4,
-      name: 'Сергей Удар',
-      role: 'Ударные',
-      description: 'Мастер металлических инструментов и звукового дизайна.',
-      photoUrl: undefined // Можно указать путь к фото, например: '/image/member4.jpg'
+      name: 'Константин Кузнецов',
+      role: 'Участник',
+      description: 'Барабанные партии',
+      photoUrl: undefined
+    },
+    {
+      id: 5,
+      name: 'Лисичкина Вероника',
+      role: 'Участник',
+      description: 'Перкуссия',
+      photoUrl: undefined
+    },
+    {
+      id: 6,
+      name: 'Татьяна Кригер',
+      role: 'Участник',
+      description: 'Ритм-секция',
+      photoUrl: undefined
+    },
+    {
+      id: 7,
+      name: 'Артем Полехин',
+      role: 'Участник',
+      description: 'Ударные',
+      photoUrl: undefined
     }
   ];
 
@@ -60,12 +81,12 @@ const Collective: React.FC = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-purple-400 drop-shadow-[0_0_15px_rgba(139,92,246,0.5)]">КОЛЛЕКТИВ</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Четыре мастера ритма, объединенные одной целью — создавать незабываемые звуковые переживания.
+            Мастера ритма, объединенные одной целью — создавать незабываемые звуковые переживания.
           </p>
         </div>
 
         {/* Members Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16">
           {members.map((member) => (
             <div
               key={member.id}
@@ -112,7 +133,7 @@ const Collective: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
           <div className="bg-brand-gray/10 border border-white/5 p-6 rounded-xl text-center group hover:bg-brand-accent/5 hover:border-brand-accent/30 transition-all duration-300">
             <Users className="w-8 h-8 text-brand-accent mx-auto mb-3 group-hover:scale-110 transition-transform" />
-            <div className="text-3xl font-display font-semibold text-white mb-1">04</div>
+            <div className="text-3xl font-display font-semibold text-white mb-1">07</div>
                   <div className="text-xs text-gray-400 uppercase tracking-wider">Участников</div>
           </div>
 
