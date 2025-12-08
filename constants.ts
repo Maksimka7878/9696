@@ -77,10 +77,10 @@ export const TIMELINE_DATA: TimelineItem[] = [
 ];
 
 export const WHY_VISIT_IMAGES: WhyVisitImage[] = [
-  { id: 1, url: 'https://images.unsplash.com/photo-1470229722913-7c0d2dbbafd3?q=80&w=600&auto=format&fit=crop', caption: 'Live Show' },
-  { id: 2, url: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=600&auto=format&fit=crop', caption: 'Energy' },
-  { id: 3, url: 'https://images.unsplash.com/photo-1459749411177-0473ef716175?q=80&w=600&auto=format&fit=crop', caption: 'Vibe' },
-  { id: 4, url: 'https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?q=80&w=600&auto=format&fit=crop', caption: 'Lights' },
+  { id: 1, url: 'https://images.unsplash.com/photo-1470229722913-7c0d2dbbafd3?q=80&w=600&auto=format&fit=crop', caption: 'Живое Выступление' },
+  { id: 2, url: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=600&auto=format&fit=crop', caption: 'Энергия' },
+  { id: 3, url: 'https://images.unsplash.com/photo-1459749411177-0473ef716175?q=80&w=600&auto=format&fit=crop', caption: 'Атмосфера' },
+  { id: 4, url: 'https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?q=80&w=600&auto=format&fit=crop', caption: 'Свет' },
 ];
 
 export const TRACKLIST_DATA: TrackItem[] = [

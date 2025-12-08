@@ -92,13 +92,13 @@ const About: React.FC = () => {
                  <div className="absolute -bottom-6 -right-6 text-brand-accent font-mono text-xs bg-black px-2 py-1 border border-brand-accent">SNARE.WAV</div>
              </div>
 
-             {/* Floating Cymbal/Detail (Bottom Right) */}
-             <div className="absolute bottom-[-20px] right-[-20px] md:bottom-0 md:right-0 w-40 h-40 md:w-56 md:h-56 z-10 animate-float-slower drop-shadow-[0_20px_30px_rgba(0,0,0,0.5)]">
+             {/* Floating Baraban (Top Right - Above Main Photo) */}
+             <div className="absolute top-[-30px] right-[-30px] md:top-[-40px] md:right-[-40px] w-40 h-40 md:w-56 md:h-56 z-30 animate-float-slower drop-shadow-[0_20px_30px_rgba(0,0,0,0.5)]">
                  <img 
                    src="/image/baraban.jpg" 
                    className="w-full h-full object-cover rounded-full border-2 border-white/20 filter sepia-[.5] hue-rotate-180"
                    style={{ clipPath: 'circle(50%)' }}
-                   alt="Cymbal"
+                   alt="Baraban"
                  />
              </div>
 

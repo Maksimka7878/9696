@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-[#15071f]">
+    <section id="hero" className="relative min-h-screen md:h-screen w-full overflow-hidden flex items-center justify-center bg-[#15071f] py-8 md:py-0">
       
       {/* === SPOTLIGHTS BACKGROUND === */}
       {/* Ambient background gradient */}
@@ -67,40 +67,40 @@ const Hero: React.FC = () => {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[30vh] bg-gradient-to-t from-brand-accent/40 to-transparent blur-[110px] z-0"></div>
 
       {/* Main Content */}
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-8">
         
-        <div className="mb-3 md:mb-4 animate-fadeIn">
-            <span className="text-brand-accent uppercase tracking-[0.5em] text-xs md:text-sm font-semibold drop-shadow-[0_0_10px_rgba(139,92,246,0.8)]">
+        <div className="mb-2 md:mb-4 animate-fadeIn">
+            <span className="text-brand-accent uppercase tracking-[0.4em] md:tracking-[0.5em] text-[10px] md:text-sm font-semibold drop-shadow-[0_0_10px_rgba(139,92,246,0.8)]">
               Drum Percussion Show
             </span>
         </div>
 
-        <div className="mb-3 md:mb-4 animate-fadeIn flex justify-center translate-y-4 md:translate-y-8">
+        <div className="mb-2 md:mb-4 animate-fadeIn flex justify-center translate-y-2 md:translate-y-8">
           <img 
             src="/voloshin-logo.svg" 
             alt="Voloshin logo" 
-            className="w-48 md:w-80 lg:w-96 xl:w-[28rem] drop-shadow-[0_0_25px_rgba(0,0,0,0.35)]" 
+            className="w-56 md:w-80 lg:w-96 xl:w-[28rem] drop-shadow-[0_0_25px_rgba(0,0,0,0.35)]" 
           />
         </div>
 
-        <div className="w-full flex flex-row flex-wrap items-center justify-center gap-4 md:gap-6 mb-3 md:mb-4 animate-scale-in">
-          <h1 className="text-3xl md:text-[4rem] lg:text-[4.5rem] font-display font-semibold leading-none tracking-tight drop-shadow-2xl flex flex-row items-center gap-2 md:gap-4">
-            <div className="bg-[#9f1e4f] flex items-center py-1.5 md:py-3 px-3 md:px-5">
-              <span className="text-yellow-400 text-2xl md:text-[3.5rem] lg:text-[3.8rem] tracking-tight leading-none inline-block translate-y-[1px] md:translate-y-[2px] transform">ГРИМЕРКА</span>
+        <div className="w-full flex flex-row flex-wrap items-center justify-center gap-2 md:gap-6 mb-2 md:mb-4 animate-scale-in">
+          <h1 className="text-4xl md:text-[4rem] lg:text-[4.5rem] font-display font-semibold leading-none tracking-tight drop-shadow-2xl flex flex-row items-center gap-1.5 md:gap-4">
+            <div className="bg-[#9f1e4f] flex items-center py-1 md:py-3 px-2.5 md:px-5">
+              <span className="text-yellow-400 text-3xl md:text-[3.5rem] lg:text-[3.8rem] tracking-tight leading-none inline-block translate-y-[1px] md:translate-y-[2px] transform">ГРИМЕРКА</span>
             </div>
-            <span className="text-yellow-300 text-xl md:text-[3rem] lg:text-[3.2rem] tracking-tight">96</span>
+            <span className="text-yellow-300 text-2xl md:text-[3rem] lg:text-[3.2rem] tracking-tight">96</span>
           </h1>
         </div>
 
-        <p className="text-gray-200 text-base md:text-xl max-w-2xl mx-auto mb-4 md:mb-6 font-light leading-relaxed drop-shadow-lg animate-fadeIn" style={{ animationDelay: '0.3s' }}>
+        <p className="text-gray-200 text-lg md:text-xl max-w-2xl mx-auto mb-3 md:mb-6 font-light leading-relaxed drop-shadow-lg animate-fadeIn px-2" style={{ animationDelay: '0.3s' }}>
           Завораживающее симфо-мультимедиа шоу, объединившее в себе бессмертные ритмы
           уличной культуры и уникальный аудио-визуальный опыт.
         </p>
         
-        <div className="flex flex-col md:flex-row gap-6 justify-center items-center animate-fadeIn" style={{ animationDelay: '0.6s' }}>
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center animate-fadeIn" style={{ animationDelay: '0.6s' }}>
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}
-              className="px-10 md:px-12 py-4 md:py-5 bg-brand-accent rounded-full font-semibold font-display tracking-widest uppercase text-white text-sm md:text-base shadow-[0_0_30px_rgba(139,92,246,0.4)] hover:shadow-[0_0_50px_rgba(139,92,246,0.6)] hover:bg-brand-accentHover transition-all duration-300 transform hover:-translate-y-1"
+              className="px-8 md:px-12 py-3.5 md:py-5 bg-brand-accent rounded-full font-semibold font-display tracking-widest uppercase text-white text-base md:text-base shadow-[0_0_30px_rgba(139,92,246,0.4)] hover:shadow-[0_0_50px_rgba(139,92,246,0.6)] hover:bg-brand-accentHover transition-all duration-300 transform hover:-translate-y-1"
             >
               КУПИТЬ БИЛЕТ
             </button>

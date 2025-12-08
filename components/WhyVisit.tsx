@@ -221,7 +221,7 @@ const WhyVisit: React.FC = () => {
                   </div>
                   <div className="px-4 py-4 text-center bg-white flex-shrink-0">
                       <h3 className="font-display font-semibold text-xl text-gray-800 uppercase tracking-widest leading-tight">{img.caption}</h3>
-                    <p className="text-[10px] text-gray-500 font-sans tracking-widest mt-1">GRIMERKA96 • TOUR 2024</p>
+                    <p className="text-[10px] text-gray-500 font-sans tracking-widest mt-1">ГРИМЕРКА96 • ТУР 2024</p>
                   </div>
                 </div>
               );
@@ -257,7 +257,7 @@ const WhyVisit: React.FC = () => {
           <div className="flex justify-center">
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}
-              className="px-10 py-4 bg-white text-brand-black rounded-lg font-semibold font-display tracking-[0.2em] uppercase shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:bg-gray-200 transition-all duration-300"
+              className="px-10 py-4 bg-brand-accent text-white rounded-lg font-semibold font-display tracking-[0.2em] uppercase shadow-[0_0_20px_rgba(139,92,246,0.4)] hover:bg-brand-accentHover transition-all duration-300"
             >
               Купить билет
             </button>
@@ -306,7 +306,7 @@ const WhyVisit: React.FC = () => {
                       </div>
                       <div className="px-4 py-4 text-center bg-white flex-shrink-0">
                         <h3 className="font-display font-semibold text-2xl text-gray-800 uppercase tracking-widest leading-tight">{img.caption}</h3>
-                        <p className="text-[10px] text-gray-500 font-sans tracking-widest mt-1">GRIMERKA96 • TOUR 2024</p>
+                        <p className="text-[10px] text-gray-500 font-sans tracking-widest mt-1">ГРИМЕРКА96 • ТУР 2024</p>
                       </div>
                     </div>
                   );
@@ -336,7 +336,7 @@ const WhyVisit: React.FC = () => {
 
                 <button 
                   onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}
-                  className="px-10 py-4 bg-white text-brand-black rounded-lg font-semibold font-display tracking-[0.2em] uppercase shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:bg-gray-200 transition-all duration-300 hover:-translate-y-1"
+                  className="px-10 py-4 bg-brand-accent text-white rounded-lg font-semibold font-display tracking-[0.2em] uppercase shadow-[0_0_20px_rgba(139,92,246,0.4)] hover:bg-brand-accentHover transition-all duration-300 hover:-translate-y-1"
                 >
                   Купить билет
                 </button>
