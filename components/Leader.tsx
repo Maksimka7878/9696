@@ -11,32 +11,34 @@ const Leader: React.FC = () => {
   const imageRef = useRef<HTMLImageElement>(null);
   const touchStartX = useRef<number>(0);
   const touchEndX = useRef<number>(0);
+  const galleryContainerRef = useRef<HTMLDivElement>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   // Все доступные изображения
   const galleryImages = [
-    { src: '/image/2025-12-08%2015.55.24.jpg', alt: 'Валерий Волошин на сцене' },
-    { src: '/image/2025-12-08%2015.55.31.jpg', alt: 'Выступление с группой' },
-    { src: '/image/2025-12-08%2015.55.38.jpg', alt: 'Концерт Grimerka96' },
-    { src: '/image/2025-12-08%2015.55.43.jpg', alt: 'Барабанное шоу' },
-    { src: '/image/2025-12-08%2015.55.50.jpg', alt: 'Выступление на фестивале' },
-    { src: '/image/2025-12-08%2015.56.06.jpg', alt: 'Работа с известными артистами' },
-    { src: '/image/2025-12-08%2015.56.13.jpg', alt: 'Концертное выступление' },
-    { src: '/image/2025-12-08%2015.56.20.jpg', alt: 'Барабанное шоу Валерия Волошина' },
-    { src: '/image/2025-12-08%2015.56.24.jpg', alt: 'Выступление на сцене' },
-    { src: '/image/2025-12-08%2015.56.29.jpg', alt: 'Концертное выступление' },
-    { src: '/image/2025-12-08%2015.56.39.jpg', alt: 'Барабанное шоу' },
-    { src: '/image/2025-12-08%2015.56.44.jpg', alt: 'Выступление с коллективом' },
-    { src: '/image/2025-12-08%2015.56.51.jpg', alt: 'Концерт Grimerka96' },
-    { src: '/image/2025-12-08%2015.56.55.jpg', alt: 'Барабанное шоу' },
-    { src: '/image/2025-12-08%2015.57.00.jpg', alt: 'Выступление на фестивале' },
-    { src: '/image/2025-12-08%2015.57.06.jpg', alt: 'Концертное выступление' },
-    { src: '/image/2025-12-08%2015.57.11.jpg', alt: 'Работа с известными артистами' },
-    { src: '/image/2025-12-08%2015.57.16.jpg', alt: 'Барабанное шоу Валерия Волошина' },
-    { src: '/image/2025-12-08%2015.57.23.jpg', alt: 'Выступление на сцене' },
-    { src: '/image/2025-12-08%2015.57.27.jpg', alt: 'Концертное выступление' },
-    { src: '/image/2025-12-08%2015.57.33.jpg', alt: 'Барабанное шоу' },
-    { src: '/image/2025-12-08%2015.57.37.jpg', alt: 'Выступление с группой' },
-    { src: '/image/2025-12-08%2015.57.43.jpg', alt: 'Концерт Grimerka96' },
+    { src: '/image/2025-12-08%2015.55.24.webp', alt: 'Валерий Волошин на сцене' },
+    { src: '/image/2025-12-08%2015.55.31.webp', alt: 'Выступление с группой' },
+    { src: '/image/2025-12-08%2015.55.38.webp', alt: 'Концерт Grimerka96' },
+    { src: '/image/2025-12-08%2015.55.43.webp', alt: 'Барабанное шоу' },
+    { src: '/image/2025-12-08%2015.55.50.webp', alt: 'Выступление на фестивале' },
+    { src: '/image/2025-12-08%2015.56.06.webp', alt: 'Работа с известными артистами' },
+    { src: '/image/2025-12-08%2015.56.13.webp', alt: 'Концертное выступление' },
+    { src: '/image/2025-12-08%2015.56.20.webp', alt: 'Барабанное шоу Валерия Волошина' },
+    { src: '/image/2025-12-08%2015.56.24.webp', alt: 'Выступление на сцене' },
+    { src: '/image/2025-12-08%2015.56.29.webp', alt: 'Концертное выступление' },
+    { src: '/image/2025-12-08%2015.56.39.webp', alt: 'Барабанное шоу' },
+    { src: '/image/2025-12-08%2015.56.44.webp', alt: 'Выступление с коллективом' },
+    { src: '/image/2025-12-08%2015.56.51.webp', alt: 'Концерт Grimerka96' },
+    { src: '/image/2025-12-08%2015.56.55.webp', alt: 'Барабанное шоу' },
+    { src: '/image/2025-12-08%2015.57.00.webp', alt: 'Выступление на фестивале' },
+    { src: '/image/2025-12-08%2015.57.06.webp', alt: 'Концертное выступление' },
+    { src: '/image/2025-12-08%2015.57.11.webp', alt: 'Работа с известными артистами' },
+    { src: '/image/2025-12-08%2015.57.16.webp', alt: 'Барабанное шоу Валерия Волошина' },
+    { src: '/image/2025-12-08%2015.57.23.webp', alt: 'Выступление на сцене' },
+    { src: '/image/2025-12-08%2015.57.27.webp', alt: 'Концертное выступление' },
+    { src: '/image/2025-12-08%2015.57.33.webp', alt: 'Барабанное шоу' },
+    { src: '/image/2025-12-08%2015.57.37.webp', alt: 'Выступление с группой' },
+    { src: '/image/2025-12-08%2015.57.43.webp', alt: 'Концерт Grimerka96' },
   ];
 
   const openModal = useCallback((index: number) => {
@@ -178,32 +180,53 @@ const Leader: React.FC = () => {
       };
     }
   }, [selectedImage, closeModal, nextImage, prevImage, handleZoomIn, handleZoomOut]);
+
+  // Handle gallery scroll to update progress
+  const handleGalleryScroll = useCallback(() => {
+    if (galleryContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = galleryContainerRef.current;
+      const maxScroll = scrollWidth - clientWidth;
+      const progress = maxScroll > 0 ? (scrollLeft / maxScroll) * 100 : 0;
+      setScrollProgress(progress);
+    }
+  }, []);
+
+  // Handle slider change to scroll gallery
+  const handleSliderChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = parseFloat(e.target.value);
+    setScrollProgress(value);
+    if (galleryContainerRef.current) {
+      const { scrollWidth, clientWidth } = galleryContainerRef.current;
+      const maxScroll = scrollWidth - clientWidth;
+      galleryContainerRef.current.scrollLeft = (value / 100) * maxScroll;
+    }
+  }, []);
   return (
     <section id="leader" className="py-24 bg-[#1a0a2b] relative overflow-hidden border-t border-white/5">
-      
+
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-accent/5 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-900/10 rounded-full blur-[100px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
+
           {/* Left Column: Photo/Visual */}
           <div className="relative order-2 lg:order-1">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 relative group">
               <div className="absolute inset-0 bg-brand-accent/20 z-10 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500"></div>
-              <img 
-                src="/image/VV.jpg" 
-                alt="Валерий Волошин" 
-                className="w-full h-full object-cover filter contrast-125 saturate-0 group-hover:saturate-100 transition-all duration-700" 
+              <img
+                src="/image/VV.webp"
+                alt="Валерий Волошин"
+                className="w-full h-full object-cover filter contrast-125 saturate-0 group-hover:saturate-100 transition-all duration-700"
               />
-              
+
               {/* Overlay Badge */}
               <div className="absolute bottom-6 left-6 bg-brand-accent/90 backdrop-blur-md px-4 py-2 rounded-lg border border-white/20">
                 <span className="text-white font-display text-xl tracking-wide">ХУД. РУКОВОДИТЕЛЬ</span>
               </div>
             </div>
-            
+
             {/* Decorative Elements */}
             <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-brand-accent/50 rounded-tl-3xl"></div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-brand-accent/50 rounded-br-3xl"></div>
@@ -219,7 +242,7 @@ const Leader: React.FC = () => {
                 ВАЛЕРИЙ <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-purple-400">ВОЛОШИН</span>
               </h2>
               <p className="text-xl text-gray-300 font-light">
-                Профессиональный барабанщик, действующий музыкант и преподаватель ударных со стажем более 25 лет.
+                Профессиональный барабанщик, действующий музыкант со стажем более 25 лет.
               </p>
             </div>
 
@@ -227,7 +250,7 @@ const Leader: React.FC = () => {
               <p>
                 Высшее образование — <strong className="text-white">Московский Государственный Университет Культуры и Искусства</strong> (2002 г).
               </p>
-              
+
               <div className="bg-brand-gray/10 border border-white/5 p-6 rounded-xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-4 opacity-10">
                   <Star className="w-16 h-16 text-white" />
@@ -250,19 +273,19 @@ const Leader: React.FC = () => {
               </div>
 
               <p className="italic border-l-4 border-brand-accent pl-4 py-1 bg-gradient-to-r from-brand-accent/5 to-transparent">
-                "Год назад родилось Барабанное Шоу Валерия Волошина! Возраст моих учеников от 4 до 60 лет, мы часто выступаем в известных клубах, участвуем в Международных Фестивалях."
+                "Вот и родилось Барабанное Шоу Валерия Волошина! Возраст моих участников от 4 до 60 лет, мы часто выступаем в известных клубах, участвуем в Международных Фестивалях."
               </p>
             </div>
 
             <div className="flex flex-wrap gap-4 pt-4">
-               <div className="px-4 py-2 bg-white/5 rounded-lg border border-white/10 flex items-center gap-2 text-sm text-gray-300">
-                 <Award className="w-4 h-4 text-brand-accent" />
-                 <span>25+ лет стажа</span>
-               </div>
-               <div className="px-4 py-2 bg-white/5 rounded-lg border border-white/10 flex items-center gap-2 text-sm text-gray-300">
-                 <Music className="w-4 h-4 text-brand-accent" />
-                 <span>МГИК (2002)</span>
-               </div>
+              <div className="px-4 py-2 bg-white/5 rounded-lg border border-white/10 flex items-center gap-2 text-sm text-gray-300">
+                <Award className="w-4 h-4 text-brand-accent" />
+                <span>25+ лет стажа</span>
+              </div>
+              <div className="px-4 py-2 bg-white/5 rounded-lg border border-white/10 flex items-center gap-2 text-sm text-gray-300">
+                <Music className="w-4 h-4 text-brand-accent" />
+                <span>МГИК (2002)</span>
+              </div>
             </div>
           </div>
 
@@ -283,7 +306,11 @@ const Leader: React.FC = () => {
           </div>
 
           {/* Horizontal Scrollable Gallery */}
-          <div className="overflow-x-auto overflow-y-hidden pb-4 -mx-4 px-4 scrollbar-hide">
+          <div
+            ref={galleryContainerRef}
+            onScroll={handleGalleryScroll}
+            className="overflow-x-auto overflow-y-hidden pb-4 -mx-4 px-4 scrollbar-hide"
+          >
             <div className="flex items-center gap-4 md:gap-6" style={{ width: 'max-content' }}>
               {galleryImages.map((image, index) => (
                 <div
@@ -297,10 +324,10 @@ const Leader: React.FC = () => {
                     className="w-full h-full object-cover filter brightness-[0.8] contrast-125 group-hover:brightness-100 transition-all duration-700"
                     loading="lazy"
                   />
-                  
+
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-accent/10 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500"></div>
-                  
+
                   {/* Zoom Icon */}
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/40 shadow-[0_0_30px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-500">
@@ -319,10 +346,35 @@ const Leader: React.FC = () => {
             </div>
           </div>
 
-          {/* Scroll Hint */}
-          <div className="text-center mt-6">
-            <p className="text-gray-500 text-xs tracking-wider uppercase animate-pulse">
-              ← Листайте влево/вправо →
+          {/* Custom Horizontal Scrollbar/Slider */}
+          <div className="mt-8 px-4 max-w-2xl mx-auto">
+            <div className="relative">
+              {/* Track */}
+              <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+                {/* Progress fill */}
+                <div
+                  className="h-full bg-gradient-to-r from-brand-accent to-purple-400 rounded-full transition-all duration-150"
+                  style={{ width: `${scrollProgress}%` }}
+                />
+              </div>
+              {/* Slider input */}
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value={scrollProgress}
+                onChange={handleSliderChange}
+                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                aria-label="Прокрутка галереи"
+              />
+              {/* Thumb indicator */}
+              <div
+                className="absolute top-1/2 -translate-y-1/2 w-5 h-5 bg-brand-accent rounded-full border-2 border-white shadow-[0_0_15px_rgba(139,92,246,0.6)] pointer-events-none transition-all duration-150"
+                style={{ left: `calc(${scrollProgress}% - 10px)` }}
+              />
+            </div>
+            <p className="text-gray-500 text-xs tracking-wider uppercase mt-4 text-center">
+              ← Листайте или используйте ползунок →
             </p>
           </div>
         </div>
@@ -449,7 +501,7 @@ const Leader: React.FC = () => {
                   onLoad={() => setImageLoaded(true)}
                 />
               </div>
-              
+
               {/* Image Info */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur-md px-6 py-4 rounded-xl border border-white/20 shadow-2xl z-20">
                 <p className="text-white text-sm font-display uppercase tracking-wider text-center">
@@ -457,7 +509,7 @@ const Leader: React.FC = () => {
                 </p>
                 <div className="flex items-center justify-center gap-2 mt-2">
                   <div className="h-1 bg-white/20 rounded-full flex-1 max-w-[200px]">
-                    <div 
+                    <div
                       className="h-full bg-brand-accent rounded-full transition-all duration-300"
                       style={{ width: `${((selectedImage + 1) / galleryImages.length) * 100}%` }}
                     ></div>
@@ -482,11 +534,10 @@ const Leader: React.FC = () => {
                       setZoom(1);
                       setPosition({ x: 0, y: 0 });
                     }}
-                    className={`flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
-                      idx === selectedImage
-                        ? 'border-brand-accent scale-110 shadow-[0_0_20px_rgba(139,92,246,0.6)]'
-                        : 'border-white/20 hover:border-white/40 hover:scale-105'
-                    }`}
+                    className={`flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden border-2 transition-all duration-300 ${idx === selectedImage
+                      ? 'border-brand-accent scale-110 shadow-[0_0_20px_rgba(139,92,246,0.6)]'
+                      : 'border-white/20 hover:border-white/40 hover:scale-105'
+                      }`}
                   >
                     <img
                       src={img.src}

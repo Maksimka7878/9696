@@ -16,62 +16,62 @@ const Collective: React.FC = () => {
       name: 'Валерий Волошин',
       role: 'Худ. Рук., Зачинатель',
       description: 'Мастер ритма с 1996 года. Создатель уникального звука Grimerka96.',
-      photoUrl: undefined
+      photoUrl: '/image/VV.webp'
     },
     {
       id: 2,
       name: 'Глеб Пестриков',
       role: 'Участник',
       description: 'Ударные инструменты',
-      photoUrl: undefined
+      photoUrl: '/image/Gleb.webp'
     },
     {
       id: 3,
       name: 'Мария Пономарева',
       role: 'Участник',
       description: 'Перкуссия и ритм',
-      photoUrl: undefined
+      photoUrl: '/image/MaryaPon.webp'
     },
     {
       id: 4,
       name: 'Константин Кузнецов',
       role: 'Участник',
       description: 'Барабанные партии',
-      photoUrl: undefined
+      photoUrl: '/image/KonstantinKuz.webp'
     },
     {
       id: 5,
       name: 'Лисичкина Вероника',
       role: 'Участник',
       description: 'Перкуссия',
-      photoUrl: undefined
+      photoUrl: '/image/VeronikaLis.webp'
     },
     {
       id: 6,
       name: 'Татьяна Кригер',
       role: 'Участник',
       description: 'Ритм-секция',
-      photoUrl: undefined
+      photoUrl: '/image/TatyanaKr.webp'
     },
     {
       id: 7,
       name: 'Артем Полехин',
       role: 'Участник',
       description: 'Ударные',
-      photoUrl: undefined
+      photoUrl: '/image/ArtemPol.webp'
     }
   ];
 
   return (
     <section id="collective" className="py-32 bg-[#1a0a2b] relative overflow-hidden">
-      
+
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px] opacity-20"></div>
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand-accent/5 rounded-full blur-[100px] animate-pulse"></div>
-      <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-purple-900/10 rounded-full blur-[120px] animate-pulse" style={{animationDelay: '2s'}}></div>
+      <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-purple-900/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }}></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block px-4 py-1 mb-4 border border-brand-accent/30 rounded-full bg-brand-accent/5 backdrop-blur-md">
@@ -99,8 +99,8 @@ const Collective: React.FC = () => {
               {/* Member Avatar */}
               {member.photoUrl ? (
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full border-2 border-brand-accent/30 group-hover:border-brand-accent transition-colors overflow-hidden shadow-lg">
-                  <img 
-                    src={member.photoUrl} 
+                  <img
+                    src={member.photoUrl}
                     alt={member.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -134,19 +134,19 @@ const Collective: React.FC = () => {
           <div className="bg-brand-gray/10 border border-white/5 p-6 rounded-xl text-center group hover:bg-brand-accent/5 hover:border-brand-accent/30 transition-all duration-300">
             <Users className="w-8 h-8 text-brand-accent mx-auto mb-3 group-hover:scale-110 transition-transform" />
             <div className="text-3xl font-display font-semibold text-white mb-1">07</div>
-                  <div className="text-xs text-gray-400 uppercase tracking-wider">Участников</div>
+            <div className="text-xs text-gray-400 uppercase tracking-wider">Участников</div>
           </div>
 
           <div className="bg-brand-gray/10 border border-white/5 p-6 rounded-xl text-center group hover:bg-brand-accent/5 hover:border-brand-accent/30 transition-all duration-300">
             <Music className="w-8 h-8 text-brand-accent mx-auto mb-3 group-hover:scale-110 transition-transform" />
             <div className="text-3xl font-display font-semibold text-white mb-1">120+</div>
-                  <div className="text-xs text-gray-400 uppercase tracking-wider">Концертов</div>
+            <div className="text-xs text-gray-400 uppercase tracking-wider">Концертов</div>
           </div>
 
           <div className="bg-brand-gray/10 border border-white/5 p-6 rounded-xl text-center group hover:bg-brand-accent/5 hover:border-brand-accent/30 transition-all duration-300">
             <Award className="w-8 h-8 text-brand-accent mx-auto mb-3 group-hover:scale-110 transition-transform" />
             <div className="text-3xl font-display font-semibold text-white mb-1">28</div>
-                  <div className="text-xs text-gray-400 uppercase tracking-wider">Лет опыта</div>
+            <div className="text-xs text-gray-400 uppercase tracking-wider">Лет опыта</div>
           </div>
 
           <div className="bg-brand-gray/10 border border-white/5 p-6 rounded-xl text-center group hover:bg-brand-accent/5 hover:border-brand-accent/30 transition-all duration-300">

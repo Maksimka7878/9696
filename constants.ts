@@ -1,11 +1,11 @@
-import { 
-  NavItem, 
-  TourDate, 
-  GalleryItem, 
-  TimelineItem, 
-  WhyVisitImage, 
-  TrackItem, 
-  FAQItem 
+import {
+  NavItem,
+  TourDate,
+  GalleryItem,
+  TimelineItem,
+  WhyVisitImage,
+  TrackItem,
+  FAQItem
 } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
@@ -28,45 +28,45 @@ export const TOUR_DATES: TourDate[] = [
 ];
 
 export const GALLERY_ITEMS: GalleryItem[] = [
-  { 
-    id: 1, 
-    url: 'https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?q=80&w=800&auto=format&fit=crop', 
-    title: 'Neon Pulse', 
+  {
+    id: 1,
+    url: 'https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?q=80&w=800&auto=format&fit=crop',
+    title: 'Neon Pulse',
     type: 'image',
     width: 'narrow'
   },
-  { 
-    id: 2, 
-    url: 'https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?q=80&w=1200&auto=format&fit=crop', 
-    title: 'Crowd Control', 
+  {
+    id: 2,
+    url: 'https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?q=80&w=1200&auto=format&fit=crop',
+    title: 'Crowd Control',
     type: 'image',
     width: 'wide'
   },
-  { 
-    id: 3, 
-    url: 'https://images.unsplash.com/photo-1514525253440-b393452e3383?q=80&w=800&auto=format&fit=crop', 
-    title: 'Rhythm Core', 
+  {
+    id: 3,
+    url: 'https://images.unsplash.com/photo-1514525253440-b393452e3383?q=80&w=800&auto=format&fit=crop',
+    title: 'Rhythm Core',
     type: 'image',
     width: 'medium'
   },
-  { 
-    id: 4, 
-    url: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=800&auto=format&fit=crop', 
-    title: 'Backstage', 
+  {
+    id: 4,
+    url: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=800&auto=format&fit=crop',
+    title: 'Backstage',
     type: 'image',
     width: 'narrow'
   },
-  { 
-    id: 5, 
-    url: 'https://images.unsplash.com/photo-1459749411177-0473ef716175?q=80&w=800&auto=format&fit=crop', 
-    title: 'Soundcheck', 
+  {
+    id: 5,
+    url: 'https://images.unsplash.com/photo-1459749411177-0473ef716175?q=80&w=800&auto=format&fit=crop',
+    title: 'Soundcheck',
     type: 'video',
     width: 'medium'
   },
 ];
 
 export const TIMELINE_DATA: TimelineItem[] = [
-  { year: '1996', description: 'Основание коллектива в гараже на окраине Екатеринбурга. Первые эксперименты с индустриальным шумом.' },
+  { year: '1996', description: 'Основание коллектива в гараже на окраине Волгограда. Первые эксперименты с индустриальным шумом.' },
   { year: '2001', description: 'Первое выступление на фестивале "Уличный Бит". Использование бочек и металлических труб.' },
   { year: '2005', description: 'Тур по клубам Урала. Формирование основного состава и фирменного стиля.' },
   { year: '2010', description: 'Интеграция электронных сэмплов и светового шоу. Выход на большую сцену.' },
@@ -88,56 +88,56 @@ export const TRACKLIST_DATA: TrackItem[] = [
     id: 1,
     title: 'Highway to Hell',
     originalArtist: 'AC/DC',
-    coverUrl: '/image/1.png',
+    coverUrl: '/image/1.webp',
     duration: '3:28'
   },
   {
     id: 2,
     title: 'The Greatest Show',
     originalArtist: 'The Greatest Showman',
-    coverUrl: '/image/2.png',
+    coverUrl: '/image/2.webp',
     duration: '5:02'
   },
   {
     id: 3,
     title: 'Is This Love',
     originalArtist: 'Whitesnake',
-    coverUrl: '/image/3.png',
+    coverUrl: '/image/3.webp',
     duration: '4:43'
   },
   {
     id: 4,
     title: 'Gaia',
     originalArtist: 'Chris Coleman',
-    coverUrl: '/image/4.png',
+    coverUrl: '/image/4.webp',
     duration: '4:15'
   },
   {
     id: 5,
     title: 'Smoke on the Water',
     originalArtist: 'Deep Purple',
-    coverUrl: '/image/5.png',
+    coverUrl: '/image/5.webp',
     duration: '5:40'
   },
   {
     id: 6,
     title: 'Кукушка',
     originalArtist: 'Полина Гагарина',
-    coverUrl: '/image/6.png',
+    coverUrl: '/image/6.webp',
     duration: '3:52'
   },
   {
     id: 7,
     title: 'Соло',
     originalArtist: 'Valery Voloshin',
-    coverUrl: '/image/7.png',
+    coverUrl: '/image/7.webp',
     duration: '2:10'
   },
   {
     id: 8,
     title: "Cryin'",
     originalArtist: 'Aerosmith',
-    coverUrl: '/image/8.png',
+    coverUrl: '/image/8.webp',
     duration: '5:08'
   }
 ];
@@ -146,12 +146,12 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     id: 1,
     question: 'Сколько длится выступление?',
-    answer: 'Стандартная программа длится 90 минут. Мы также можем адаптировать сет под формат фестиваля (45-60 минут).'
+    answer: 'Стандартная программа длится 120 минут. Мы также можем адаптировать сет под формат фестиваля (45-60 минут).'
   },
   {
     id: 2,
     question: 'Есть ли возрастные ограничения?',
-    answer: 'Наши сольные концерты обычно 12+. Для ночных клубных выступлений — 18+.'
+    answer: 'Наши сольные концерты обычно 6+. Для ночных клубных выступлений — 18+.'
   },
   {
     id: 3,

@@ -5,7 +5,7 @@ import { MousePointerClick, ChevronLeft, ChevronRight } from 'lucide-react';
 const WhyVisit: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  
+
   // Mobile swipe state
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
@@ -31,18 +31,18 @@ const WhyVisit: React.FC = () => {
       setSwipeOffset(0);
       return;
     }
-    
+
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
-    
+
     if (isLeftSwipe && currentCardIndex < WHY_VISIT_IMAGES.length - 1) {
       setCurrentCardIndex(currentCardIndex + 1);
     }
     if (isRightSwipe && currentCardIndex > 0) {
       setCurrentCardIndex(currentCardIndex - 1);
     }
-    
+
     setSwipeOffset(0);
     setTouchStart(null);
     setTouchEnd(null);
@@ -64,7 +64,7 @@ const WhyVisit: React.FC = () => {
     const handleScroll = () => {
       if (!sectionRef.current) return;
       const section = sectionRef.current;
-      
+
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
       const viewportHeight = window.innerHeight;
@@ -87,7 +87,7 @@ const WhyVisit: React.FC = () => {
       const total = WHY_VISIT_IMAGES.length;
       // We clamp the index so the last image stays visible at the end of the scroll
       const index = Math.min(Math.floor(progress * total), total - 1);
-      
+
       setActiveIndex(index);
     };
 
@@ -124,7 +124,7 @@ const WhyVisit: React.FC = () => {
 
     // If the card is next in line (waiting in stack)
     const diff = index - activeIndex;
-    
+
     // Calculate stack effect
     const rotate = diff * 4; // 4, 8, 12 degrees
     const translateX = diff * -10; // -10, -20 px
@@ -158,13 +158,13 @@ const WhyVisit: React.FC = () => {
               <span className="text-brand-accent text-xs font-semibold tracking-[0.2em] uppercase">Визуальная Эстетика</span>
             </div>
             <h2 className="text-4xl font-display font-semibold text-white mb-6 leading-tight drop-shadow-xl">
-              ПОЧЕМУ СТОИТ <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-300">ПОСЕТИТЬ</span><br/>
+              ПОЧЕМУ СТОИТ <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-300">ПОСЕТИТЬ</span><br />
               НАШЕ ШОУ
             </h2>
             <p className="text-gray-300 text-base leading-relaxed mb-8 max-w-lg mx-auto font-light">
-              Симфоническое шоу "GRIMERKA96" — это не просто концерт. Это визуальное путешествие. 
-              Каждый удар барабана синхронизирован со вспышкой света, создавая 
+              Барабанное шоу "GRIMERKA96" — это не просто концерт. Это визуальное путешествие.
+              Каждый удар барабана синхронизирован со вспышкой света, создавая
               эффект полного погружения, который вы никогда не забудете.
             </p>
           </div>
@@ -175,11 +175,11 @@ const WhyVisit: React.FC = () => {
               const isActive = index === currentCardIndex;
               const isPrev = index < currentCardIndex;
               const diff = index - currentCardIndex;
-              
+
               let transform = '';
               let opacity = 0;
               let zIndex = 0;
-              
+
               if (isPrev) {
                 transform = 'translateX(-150%) rotate(-20deg)';
                 opacity = 0;
@@ -195,12 +195,12 @@ const WhyVisit: React.FC = () => {
                 opacity = Math.max(0, 1 - diff * 0.3);
                 zIndex = 50 - diff;
               }
-              
+
               return (
                 <div
                   key={img.id}
                   className="absolute w-72 h-[420px] bg-white shadow-[0_20px_60px_rgba(0,0,0,0.5)] rounded-sm border border-gray-200 flex flex-col overflow-hidden transition-all duration-500 ease-out touch-none"
-                  style={{ 
+                  style={{
                     transform,
                     opacity,
                     zIndex
@@ -212,15 +212,15 @@ const WhyVisit: React.FC = () => {
                   <div className="w-full flex-1 overflow-hidden bg-white relative px-3 pt-3">
                     <div className="w-full h-full overflow-hidden bg-gray-900 relative rounded-sm">
                       <div className="absolute inset-0 bg-brand-accent/10 z-10 mix-blend-overlay"></div>
-                      <img 
-                        src={img.url} 
-                        alt={img.caption} 
-                        className="w-full h-full object-cover filter contrast-110" 
+                      <img
+                        src={img.url}
+                        alt={img.caption}
+                        className="w-full h-full object-cover filter contrast-110"
                       />
                     </div>
                   </div>
                   <div className="px-4 py-4 text-center bg-white flex-shrink-0">
-                      <h3 className="font-display font-semibold text-xl text-gray-800 uppercase tracking-widest leading-tight">{img.caption}</h3>
+                    <h3 className="font-display font-semibold text-xl text-gray-800 uppercase tracking-widest leading-tight">{img.caption}</h3>
                     <p className="text-[10px] text-gray-500 font-sans tracking-widest mt-1">ГРИМЕРКА96 • ТУР 2024</p>
                   </div>
                 </div>
@@ -255,8 +255,8 @@ const WhyVisit: React.FC = () => {
           </div>
 
           <div className="flex justify-center">
-            <button 
-              onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}
+            <button
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-10 py-4 bg-brand-accent text-white rounded-lg font-semibold font-display tracking-[0.2em] uppercase shadow-[0_0_20px_rgba(139,92,246,0.4)] hover:bg-brand-accentHover transition-all duration-300"
             >
               Купить билет
@@ -269,7 +269,7 @@ const WhyVisit: React.FC = () => {
       <section ref={sectionRef} className="hidden md:block relative h-[400vh] bg-[#1f0d2e]">
         {/* Sticky Container */}
         <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center">
-          
+
           {/* Background Atmosphere - Nebula Effect */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-[#1a052a] to-[#0f0518] z-0"></div>
@@ -279,17 +279,17 @@ const WhyVisit: React.FC = () => {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              
+
               {/* LEFT SIDE: The Scroll-Driven Photo Stack */}
               <div className="relative h-[500px] w-full flex items-center justify-start perspective-1000">
                 {WHY_VISIT_IMAGES.map((img, index) => {
                   const cardState = getCardStyle(index);
-                  
+
                   return (
                     <div
                       key={img.id}
                       className={`absolute w-80 h-[420px] bg-white shadow-[0_20px_60px_rgba(0,0,0,0.5)] rounded-sm border border-gray-200 flex flex-col overflow-hidden ${cardState.className}`}
-                      style={{ 
+                      style={{
                         zIndex: cardState.zIndex,
                         ...cardState.style
                       }}
@@ -297,10 +297,10 @@ const WhyVisit: React.FC = () => {
                       <div className="w-full flex-1 overflow-hidden bg-white relative group px-3 pt-3">
                         <div className="w-full h-full overflow-hidden bg-gray-900 relative rounded-sm">
                           <div className="absolute inset-0 bg-brand-accent/10 z-10 mix-blend-overlay"></div>
-                          <img 
-                            src={img.url} 
-                            alt={img.caption} 
-                            className="w-full h-full object-cover filter contrast-110" 
+                          <img
+                            src={img.url}
+                            alt={img.caption}
+                            className="w-full h-full object-cover filter contrast-110"
                           />
                         </div>
                       </div>
@@ -319,23 +319,23 @@ const WhyVisit: React.FC = () => {
                   <span className="text-brand-accent text-xs font-semibold tracking-[0.2em] uppercase">Визуальная Эстетика</span>
                 </div>
                 <h2 className="text-7xl font-display font-semibold text-white mb-8 leading-[0.9] drop-shadow-xl">
-                  ПОЧЕМУ СТОИТ <br/>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-300">ПОСЕТИТЬ</span><br/>
+                  ПОЧЕМУ СТОИТ <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-300">ПОСЕТИТЬ</span><br />
                   НАШЕ ШОУ
                 </h2>
                 <p className="text-gray-300 text-xl leading-relaxed mb-10 max-w-lg font-light tracking-wide border-l-2 border-brand-accent pl-6">
-                  Симфоническое шоу "GRIMERKA96" — это не просто концерт. Это визуальное путешествие. 
-                  Каждый удар барабана синхронизирован со вспышкой света, создавая 
+                  Барабанное шоу "GRIMERKA96" — это не просто концерт. Это визуальное путешествие.
+                  Каждый удар барабана синхронизирован со вспышкой света, создавая
                   эффект полного погружения, который вы никогда не забудете.
                 </p>
-                
+
                 <div className="flex items-center gap-3 text-gray-500 animate-pulse mb-8">
                   <MousePointerClick className="w-5 h-5" />
                   <span className="text-xs uppercase tracking-[0.2em]">Листайте вниз для просмотра</span>
                 </div>
 
-                <button 
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}
+                <button
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                   className="px-10 py-4 bg-brand-accent text-white rounded-lg font-semibold font-display tracking-[0.2em] uppercase shadow-[0_0_20px_rgba(139,92,246,0.4)] hover:bg-brand-accentHover transition-all duration-300 hover:-translate-y-1"
                 >
                   Купить билет
