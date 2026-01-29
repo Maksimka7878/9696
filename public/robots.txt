@@ -14,7 +14,7 @@ Allow: /
 Allow: /index.html
 
 # Sitemap (если будет создан)
-# Sitemap: https://9696-opal.vercel.app/sitemap.xml
+Sitemap: https://9696-opal.vercel.app/sitemap.xml
 
 # Crawl-delay для вежливости
 Crawl-delay: 1

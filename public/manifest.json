@@ -1,0 +1,16 @@
+{
+    "name": "Grimerka96 - Drum Collective",
+    "short_name": "Grimerka96",
+    "description": "Official site for Grimerka96, a high-energy drum percussion group.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#15071f",
+    "theme_color": "#8b5cf6",
+    "icons": [
+        {
+            "src": "/voloshin-logo.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ]
+}

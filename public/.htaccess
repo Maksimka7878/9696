@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Если сайт открывается по HTTP, перенаправляем на HTTPS (раскомментируйте 2 строки ниже, если есть SSL)
+  # RewriteCond %{HTTPS} off
+  # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Не переписывать существующие файлы и папки
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Все остальные запросы отправлять на index.html
+  RewriteRule . /index.html [L]
+</IfModule>
