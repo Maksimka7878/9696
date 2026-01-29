@@ -3,19 +3,19 @@ import React from 'react';
 const Hero: React.FC = () => {
   return (
     <section id="hero" className="relative min-h-screen md:h-screen w-full overflow-hidden flex items-center justify-center bg-[#15071f] py-8 md:py-0">
-      
+
       {/* === SPOTLIGHTS BACKGROUND === */}
       {/* Ambient background gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#5b2e8d] via-[#1a0f2f] to-[#12051d] opacity-95 z-0"></div>
-      
+
       {/* Left Spotlight Beam */}
       <div className="absolute top-[-20%] left-[0] md:left-[10%] w-[40vw] md:w-[20vw] h-[150vh] bg-gradient-to-b from-white/40 via-brand-accent/30 to-transparent blur-[60px] md:blur-[90px] rotate-[-25deg] transform-origin-top z-0 animate-spotlight pointer-events-none mix-blend-screen"></div>
-      
+
       {/* Right Spotlight Beam */}
       <div className="absolute top-[-20%] right-[0] md:right-[10%] w-[40vw] md:w-[20vw] h-[150vh] bg-gradient-to-b from-white/35 via-purple-400/25 to-transparent blur-[60px] md:blur-[90px] rotate-[25deg] transform-origin-top z-0 animate-spotlight pointer-events-none mix-blend-screen" style={{ animationDelay: '2s' }}></div>
 
       {/* Floating Particles (Stars) */}
-      <div 
+      <div
         className="absolute inset-0 z-0 opacity-80 animate-pulse-fast mix-blend-screen"
         style={{
           backgroundImage: `
@@ -62,24 +62,24 @@ const Hero: React.FC = () => {
           backgroundRepeat: 'repeat',
         }}
       ></div>
-      
+
       {/* Floor Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[30vh] bg-gradient-to-t from-brand-accent/40 to-transparent blur-[110px] z-0"></div>
 
       {/* Main Content */}
       <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-8">
-        
+
         <div className="mb-2 md:mb-4 animate-fadeIn">
-            <span className="text-brand-accent uppercase tracking-[0.4em] md:tracking-[0.5em] text-[10px] md:text-sm font-semibold drop-shadow-[0_0_10px_rgba(139,92,246,0.8)]">
-              Drum Percussion Show
-            </span>
+          <span className="text-brand-accent uppercase tracking-[0.4em] md:tracking-[0.5em] text-[10px] md:text-sm font-semibold drop-shadow-[0_0_10px_rgba(139,92,246,0.8)]">
+            Drum Percussion Show
+          </span>
         </div>
 
         <div className="mb-2 md:mb-4 animate-fadeIn flex justify-center translate-y-2 md:translate-y-8">
-          <img 
-            src="/voloshin-logo.svg" 
-            alt="Voloshin logo" 
-            className="w-56 md:w-80 lg:w-96 xl:w-[28rem] drop-shadow-[0_0_25px_rgba(0,0,0,0.35)]" 
+          <img
+            src="/voloshin-logo.svg"
+            alt="Voloshin logo"
+            className="w-72 md:w-96 lg:w-[30rem] xl:w-[34rem] drop-shadow-[0_0_25px_rgba(0,0,0,0.35)]"
           />
         </div>
 
@@ -93,17 +93,16 @@ const Hero: React.FC = () => {
         </div>
 
         <p className="text-gray-200 text-lg md:text-xl max-w-2xl mx-auto mb-3 md:mb-6 font-light leading-relaxed drop-shadow-lg animate-fadeIn px-2" style={{ animationDelay: '0.3s' }}>
-          Завораживающее симфо-мультимедиа шоу, объединившее в себе бессмертные ритмы
-          уличной культуры и уникальный аудио-визуальный опыт.
+          Завораживающее барабанное мультимедиа Show
         </p>
-        
+
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center animate-fadeIn" style={{ animationDelay: '0.6s' }}>
-            <button 
-              onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}
-              className="px-8 md:px-12 py-3.5 md:py-5 bg-brand-accent rounded-full font-semibold font-display tracking-widest uppercase text-white text-base md:text-base shadow-[0_0_30px_rgba(139,92,246,0.4)] hover:shadow-[0_0_50px_rgba(139,92,246,0.6)] hover:bg-brand-accentHover transition-all duration-300 transform hover:-translate-y-1"
-            >
-              КУПИТЬ БИЛЕТ
-            </button>
+          <button
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            className="px-8 md:px-12 py-3.5 md:py-5 bg-brand-accent rounded-full font-semibold font-display tracking-widest uppercase text-white text-base md:text-base shadow-[0_0_30px_rgba(139,92,246,0.4)] hover:shadow-[0_0_50px_rgba(139,92,246,0.6)] hover:bg-brand-accentHover transition-all duration-300 transform hover:-translate-y-1"
+          >
+            КУПИТЬ БИЛЕТ
+          </button>
         </div>
       </div>
     </section>
