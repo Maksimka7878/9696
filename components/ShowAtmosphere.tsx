@@ -39,6 +39,7 @@ const ShowAtmosphere: React.FC = () => {
                 height="100%"
                 controls
                 autoPlay
+                poster="/image/preview.webp"
                 className="w-full h-full object-cover"
               >
                 <source src="/image/video9696.mp4" type="video/mp4" />
@@ -49,7 +50,7 @@ const ShowAtmosphere: React.FC = () => {
                 {/* Video Thumbnail / Content */}
                 <div className="absolute inset-0">
                   <img
-                    src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?q=80&w=1920&h=1080&auto=format&fit=crop"
+                    src="/image/preview.webp"
                     alt="Concert Atmosphere"
                     className="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity duration-700"
                   />
