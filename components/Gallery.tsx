@@ -116,9 +116,8 @@ const Gallery: React.FC = () => {
             <h3 className="text-5xl font-display font-semibold text-white mb-6 leading-none">
               ЭНЕРГИЯ <br />В КАЖДОМ <br /><span className="text-brand-accent">КАДРЕ</span>
             </h3>
-            <p className="text-gray-400 text-lg leading-relaxed">
-              Моменты, когда музыка становится физически ощутимой.
-              Световые партитуры, эмоции толпы и чистый драйв.
+            <p className="text-gray-400 text-lg leading-relaxed mb-4">
+              Моменты, когда музыка становится физически ощутимой. Песочное шоу, световые партитуры, эмоции толпы и чистый драйв от ударной энергии.
             </p>
           </div>
 

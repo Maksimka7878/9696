@@ -72,8 +72,10 @@ export const TIMELINE_DATA: TimelineItem[] = [
   { year: '2010', description: 'Интеграция электронных сэмплов и светового шоу. Выход на большую сцену.' },
   { year: '2015', description: 'Хедлайнеры фестиваля "Ритм Города". Аудитория 15 000 человек.' },
   { year: '2018', description: 'Запуск шоу "Symbio". Коллаборация с симфоническим оркестром.' },
-  { year: '2020', description: 'Онлайн-концерт в заброшенном заводе, собравший 1M+ просмотров.' },
-  { year: '2024', description: 'Мировой тур "GRIMERKA96". Новая высота звука и света.' },
+  { year: '2020', description: 'Концерты в ведущих клубах Москвы.' },
+  { year: '2024', description: 'Туры по Волгограду.' },
+  { year: '2025', description: 'Туры по Саратову.' },
+  { year: '2026', description: 'Теперь и в Нижнем Новгороде.' },
 ];
 
 export const WHY_VISIT_IMAGES: WhyVisitImage[] = [

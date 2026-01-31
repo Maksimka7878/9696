@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
           <img
             src="/voloshin-logo.svg"
             alt="Voloshin logo"
-            className="w-72 md:w-96 lg:w-[30rem] xl:w-[34rem] drop-shadow-[0_0_25px_rgba(0,0,0,0.35)]"
+            className="w-80 md:w-[28rem] lg:w-[36rem] xl:w-[42rem] drop-shadow-[0_0_25px_rgba(0,0,0,0.35)]"
           />
         </div>
 
