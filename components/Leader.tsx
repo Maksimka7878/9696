@@ -212,7 +212,7 @@ const Leader: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           {/* Left Column: Photo/Visual */}
-          <div className="relative order-2 lg:order-1">
+          <div className="relative">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 relative group">
               <div className="absolute inset-0 bg-brand-accent/20 z-10 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500"></div>
               <img
@@ -233,7 +233,7 @@ const Leader: React.FC = () => {
           </div>
 
           {/* Right Column: Content */}
-          <div className="order-1 lg:order-2 space-y-8">
+          <div className="space-y-8">
             <div>
               <div className="inline-block px-3 py-1 mb-4 border border-brand-accent/30 rounded-full bg-brand-accent/5">
                 <span className="text-brand-accent text-xs font-semibold tracking-[0.2em] uppercase">Основатель</span>
