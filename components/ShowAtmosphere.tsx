@@ -39,6 +39,7 @@ const ShowAtmosphere: React.FC = () => {
                 height="100%"
                 controls
                 autoPlay
+                preload="none"
                 poster="/image/preview.webp"
                 className="w-full h-full object-cover"
               >

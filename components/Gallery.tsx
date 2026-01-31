@@ -135,6 +135,7 @@ const Gallery: React.FC = () => {
                 <img
                   src={item.url}
                   alt={item.title}
+                  loading="lazy"
                   className="w-full h-full object-cover filter brightness-[0.8] contrast-125 group-hover:brightness-100 transition-all duration-700"
                 />
 

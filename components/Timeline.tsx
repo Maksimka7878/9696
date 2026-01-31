@@ -119,17 +119,17 @@ const Timeline: React.FC = () => {
         <div className="relative">
 
           {/* CENTRAL CABLE (Background Gray) */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 md:w-2 bg-white/10 rounded-full transform md:-translate-x-1/2 ml-4 md:ml-0 z-0"></div>
+          <div className="absolute left-[1.75rem] md:left-1/2 top-0 bottom-0 w-0.5 md:w-2 bg-white/10 rounded-full transform md:-translate-x-1/2 z-0"></div>
 
           {/* ACTIVE CABLE (Glowing Purple) */}
           <div
-            className="absolute left-4 md:left-1/2 top-0 w-1 md:w-2 bg-brand-accent rounded-full transform md:-translate-x-1/2 ml-4 md:ml-0 transition-all duration-100 ease-out shadow-[0_0_20px_rgba(139,92,246,0.8)] z-10 active-cable-max"
+            className="absolute left-[1.75rem] md:left-1/2 top-0 w-0.5 md:w-2 bg-brand-accent rounded-full transform md:-translate-x-1/2 transition-all duration-100 ease-out shadow-[0_0_20px_rgba(139,92,246,0.8)] z-10 active-cable-max"
             style={{
               height: `${scrollProgress * 100}%`
             }}
           >
             {/* The "Head" of the cable */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-4 h-4 bg-white rounded-full shadow-[0_0_20px_white] z-50"></div>
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-3 h-3 md:w-4 md:h-4 bg-white rounded-full shadow-[0_0_15px_white] md:shadow-[0_0_20px_white] z-50"></div>
           </div>
 
           <div className="space-y-12 md:space-y-24 pb-24">
@@ -147,7 +147,7 @@ const Timeline: React.FC = () => {
                   <div className="hidden md:block w-1/2"></div>
 
                   {/* CENTRAL NODE (The "Jack Input") */}
-                  <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 -translate-y-4 md:translate-y-0 w-12 h-12 ml-[-2px] md:ml-0 z-20 flex items-center justify-center">
+                  <div className="absolute left-[0.75rem] md:left-1/2 transform md:-translate-x-1/2 w-10 h-10 md:w-12 md:h-12 z-20 flex items-center justify-center">
                     {/* Outer Ring */}
                     <div className={`absolute inset-0 rounded-full border-2 transition-all duration-700 ${isVisible ? 'border-brand-accent scale-100 opacity-100 bg-brand-black' : 'border-gray-700 scale-0 opacity-0 bg-transparent'}`}></div>
 
@@ -155,13 +155,13 @@ const Timeline: React.FC = () => {
                     <div className={`absolute inset-0 rounded-full bg-brand-accent/30 blur-md transition-all duration-1000 ${isVisible ? 'opacity-100 scale-150 animate-pulse' : 'opacity-0 scale-50'}`}></div>
 
                     {/* Icon Container */}
-                    <div className={`relative z-10 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 ${isVisible ? 'bg-brand-accent rotate-0' : 'bg-gray-800 -rotate-180'}`}>
+                    <div className={`relative z-10 w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all duration-500 ${isVisible ? 'bg-brand-accent rotate-0' : 'bg-gray-800 -rotate-180'}`}>
                       {getIconForYear(index)}
                     </div>
                   </div>
 
                   {/* CONTENT CARD */}
-                  <div className={`w-full md:w-1/2 pl-16 md:pl-0 ${isEven ? 'md:pr-16 md:text-right' : 'md:pl-16 md:text-left'}`}>
+                  <div className={`w-full md:w-1/2 pl-14 md:pl-0 ${isEven ? 'md:pr-16 md:text-right' : 'md:pl-16 md:text-left'}`}>
                     <div
                       className={`
                         relative group
@@ -189,7 +189,7 @@ const Timeline: React.FC = () => {
                       </h3>
 
                       {/* Connector Line (Mobile only visual) */}
-                      <div className="md:hidden absolute left-[-2rem] top-8 w-8 h-[2px] bg-brand-accent/50"></div>
+                      <div className="md:hidden absolute left-[-1.75rem] top-6 w-6 h-[2px] bg-brand-accent/50"></div>
                     </div>
                   </div>
 
@@ -199,10 +199,10 @@ const Timeline: React.FC = () => {
           </div>
 
           {/* Bottom Connector Fade */}
-          <div className="absolute bottom-0 left-4 md:left-1/2 w-1 md:w-2 h-24 bg-gradient-to-t from-[#1a0a2b] to-transparent transform md:-translate-x-1/2 ml-4 md:ml-0 z-20"></div>
+          <div className="absolute bottom-0 left-[1.75rem] md:left-1/2 w-0.5 md:w-2 h-24 bg-gradient-to-t from-[#1a0a2b] to-transparent transform md:-translate-x-1/2 z-20"></div>
 
           {/* FINAL NODE (Завершающий кружок) */}
-          <div className="absolute left-4 md:left-1/2 bottom-0 transform md:-translate-x-1/2 -translate-y-12 md:translate-y-0 w-12 h-12 ml-[-2px] md:ml-0 z-40 flex items-center justify-center">
+          <div className="absolute left-[0.75rem] md:left-1/2 bottom-0 transform md:-translate-x-1/2 -translate-y-8 md:translate-y-0 w-10 h-10 md:w-12 md:h-12 z-40 flex items-center justify-center">
             {/* Outer Ring */}
             <div className="absolute inset-0 rounded-full border-2 border-brand-accent scale-100 opacity-100 bg-brand-black"></div>
 
@@ -210,7 +210,7 @@ const Timeline: React.FC = () => {
             <div className="absolute inset-0 rounded-full bg-brand-accent/30 blur-md opacity-100 scale-150 animate-pulse"></div>
 
             {/* Icon Container */}
-            <div className="relative z-10 w-8 h-8 rounded-full flex items-center justify-center bg-brand-accent">
+            <div className="relative z-10 w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center bg-brand-accent">
               <div className="w-2 h-2 bg-white rounded-full"></div>
             </div>
           </div>

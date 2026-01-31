@@ -105,6 +105,7 @@ const Collective: React.FC = () => {
                   <img
                     src={member.photoUrl}
                     alt={member.name}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
