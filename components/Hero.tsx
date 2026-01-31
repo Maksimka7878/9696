@@ -97,12 +97,14 @@ const Hero: React.FC = () => {
         </p>
 
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center animate-fadeIn" style={{ animationDelay: '0.6s' }}>
-          <button
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          <a
+            href="https://nn.kassir.ru/koncert/barabannoe-shou-valeriya-voloshina"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 md:px-12 py-3.5 md:py-5 bg-brand-accent rounded-full font-semibold font-display tracking-widest uppercase text-white text-base md:text-base shadow-[0_0_30px_rgba(139,92,246,0.4)] hover:shadow-[0_0_50px_rgba(139,92,246,0.6)] hover:bg-brand-accentHover transition-all duration-300 transform hover:-translate-y-1"
           >
             КУПИТЬ БИЛЕТ
-          </button>
+          </a>
         </div>
       </div>
     </section>

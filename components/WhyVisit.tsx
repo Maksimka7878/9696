@@ -255,12 +255,14 @@ const WhyVisit: React.FC = () => {
           </div>
 
           <div className="flex justify-center">
-            <button
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            <a
+              href="https://nn.kassir.ru/koncert/barabannoe-shou-valeriya-voloshina"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-10 py-4 bg-brand-accent text-white rounded-lg font-semibold font-display tracking-[0.2em] uppercase shadow-[0_0_20px_rgba(139,92,246,0.4)] hover:bg-brand-accentHover transition-all duration-300"
             >
               Купить билет
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -334,12 +336,14 @@ const WhyVisit: React.FC = () => {
                   <span className="text-xs uppercase tracking-[0.2em]">Листайте вниз для просмотра</span>
                 </div>
 
-                <button
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                <a
+                  href="https://nn.kassir.ru/koncert/barabannoe-shou-valeriya-voloshina"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-10 py-4 bg-brand-accent text-white rounded-lg font-semibold font-display tracking-[0.2em] uppercase shadow-[0_0_20px_rgba(139,92,246,0.4)] hover:bg-brand-accentHover transition-all duration-300 hover:-translate-y-1"
                 >
                   Купить билет
-                </button>
+                </a>
               </div>
 
             </div>
