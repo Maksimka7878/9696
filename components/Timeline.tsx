@@ -15,35 +15,47 @@ const Timeline: React.FC = () => {
   };
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      if (!containerRef.current) return;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (!containerRef.current) {
+            ticking = false;
+            return;
+          }
 
-      const container = containerRef.current;
-      const rect = container.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
+          const container = containerRef.current;
+          const rect = container.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
 
-      // Calculate overall progress of the section crossing the viewport
-      // Start counting when top of section hits middle of screen
-      const startOffset = windowHeight * 0.8;
-      const totalHeight = rect.height;
-      const scrolled = Math.max(0, startOffset - rect.top);
-      const progress = Math.min(1, scrolled / totalHeight);
+          // Calculate overall progress of the section crossing the viewport
+          // Start counting when top of section hits middle of screen
+          const startOffset = windowHeight * 0.8;
+          const totalHeight = rect.height;
+          const scrolled = Math.max(0, startOffset - rect.top);
+          const progress = Math.min(1, scrolled / totalHeight);
 
-      setScrollProgress(progress);
+          setScrollProgress(progress);
 
-      // Determine which items are visible
-      const newVisibleItems: number[] = [];
-      const items = container.querySelectorAll('.timeline-item');
+          // Determine which items are visible
+          const newVisibleItems: number[] = [];
+          const items = container.querySelectorAll('.timeline-item');
 
-      items.forEach((item, index) => {
-        const itemRect = item.getBoundingClientRect();
-        // Item is visible if its top is above the bottom 20% of the screen
-        if (itemRect.top < windowHeight * 0.85) {
-          newVisibleItems.push(index);
-        }
-      });
+          items.forEach((item, index) => {
+            const itemRect = item.getBoundingClientRect();
+            // Item is visible if its top is above the bottom 20% of the screen
+            if (itemRect.top < windowHeight * 0.85) {
+              newVisibleItems.push(index);
+            }
+          });
 
-      setVisibleItems(newVisibleItems);
+          setVisibleItems(newVisibleItems);
+          ticking = false;
+        });
+
+        ticking = true;
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -123,7 +135,7 @@ const Timeline: React.FC = () => {
 
           {/* ACTIVE CABLE (Glowing Purple) */}
           <div
-            className="absolute left-[1.75rem] md:left-1/2 top-0 w-0.5 md:w-2 bg-brand-accent rounded-full transform md:-translate-x-1/2 transition-all duration-100 ease-out shadow-[0_0_20px_rgba(139,92,246,0.8)] z-10 active-cable-max"
+            className="absolute left-[1.75rem] md:left-1/2 top-0 w-0.5 md:w-2 bg-brand-accent rounded-full transform md:-translate-x-1/2 shadow-[0_0_20px_rgba(139,92,246,0.8)] z-10 active-cable-max will-change-[height]"
             style={{
               height: `${scrollProgress * 100}%`
             }}

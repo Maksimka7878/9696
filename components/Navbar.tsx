@@ -63,9 +63,7 @@ const Navbar: React.FC = () => {
           {/* Mobile Contacts Info */}
           <div className={`mt-8 text-center transition-all duration-700 delay-500 ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="flex flex-col gap-3 items-center">
-              <a href="tel:+79990009696" className="text-gray-400 hover:text-brand-accent transition-colors font-display tracking-wider text-lg">
-                +7 (999) 000-96-96
-              </a>
+
               <a href="mailto:Drumgrim96@mail.ru" className="text-gray-400 hover:text-brand-accent transition-colors font-sans text-xs uppercase tracking-widest">
                 Drumgrim96@mail.ru
               </a>

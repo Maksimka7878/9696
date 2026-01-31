@@ -26,15 +26,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 text-white hover:text-brand-accent transition-colors cursor-pointer group">
-                <div className="w-12 h-12 bg-white/5 flex items-center justify-center rounded-full group-hover:bg-brand-accent/20 transition-colors">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <div>
-                  <span className="block text-xs text-gray-500 uppercase tracking-widest">Телефон</span>
-                  <span className="font-display text-lg">+7 (999) 000-96-96</span>
-                </div>
-              </div>
+
             </div>
 
             <div className="mt-12 flex gap-4">
