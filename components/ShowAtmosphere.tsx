@@ -34,16 +34,16 @@ const ShowAtmosphere: React.FC = () => {
           <div className="relative bg-black rounded-[30px] border border-white/10 shadow-2xl overflow-hidden aspect-video transform transition-transform duration-700 hover:scale-[1.01]">
 
             {isPlaying ? (
-              <iframe
+              <video
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/kIeaE_iFAb8?autoplay=1&controls=1&rel=0"
-                title="Grimerka96 Show Video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+                controls
+                autoPlay
                 className="w-full h-full object-cover"
-              ></iframe>
+              >
+                <source src="/image/video9696.mp4" type="video/mp4" />
+                Ваш браузер не поддерживает видео.
+              </video>
             ) : (
               <>
                 {/* Video Thumbnail / Content */}
