@@ -61,34 +61,46 @@ const WhyVisit: React.FC = () => {
   };
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      if (!sectionRef.current) return;
-      const section = sectionRef.current;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (!sectionRef.current) {
+            ticking = false;
+            return;
+          }
+          const section = sectionRef.current;
 
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      const viewportHeight = window.innerHeight;
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          const viewportHeight = window.innerHeight;
 
-      // Calculate scroll progress within the section
-      const scrollTop = window.scrollY;
-      const distance = scrollTop - sectionTop;
-      const maxDistance = sectionHeight - viewportHeight;
+          // Calculate scroll progress within the section
+          const scrollTop = window.scrollY;
+          const distance = scrollTop - sectionTop;
+          const maxDistance = sectionHeight - viewportHeight;
 
-      let progress = 0;
-      if (distance >= 0 && maxDistance > 0) {
-        progress = distance / maxDistance;
-      } else if (distance < 0) {
-        progress = 0;
-      } else if (distance > maxDistance) {
-        progress = 1;
+          let progress = 0;
+          if (distance >= 0 && maxDistance > 0) {
+            progress = distance / maxDistance;
+          } else if (distance < 0) {
+            progress = 0;
+          } else if (distance > maxDistance) {
+            progress = 1;
+          }
+
+          // Map progress to active index (0 to total-1)
+          const total = WHY_VISIT_IMAGES.length;
+          // We clamp the index so the last image stays visible at the end of the scroll
+          const index = Math.min(Math.floor(progress * total), total - 1);
+
+          setActiveIndex(index);
+          ticking = false;
+        });
+
+        ticking = true;
       }
-
-      // Map progress to active index (0 to total-1)
-      const total = WHY_VISIT_IMAGES.length;
-      // We clamp the index so the last image stays visible at the end of the scroll
-      const index = Math.min(Math.floor(progress * total), total - 1);
-
-      setActiveIndex(index);
     };
 
     window.addEventListener('scroll', handleScroll);

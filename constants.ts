@@ -63,6 +63,90 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     type: 'video',
     width: 'medium'
   },
+  {
+    id: 6,
+    url: '/image/video9696.mp4',
+    title: 'Show 9696',
+    type: 'video',
+    width: 'wide'
+  },
+  {
+    id: 7,
+    url: '/image/ArtemPol.webp',
+    title: 'Artem',
+    type: 'image',
+    width: 'narrow'
+  },
+  {
+    id: 8,
+    url: '/image/grim_solo.mp4',
+    title: 'Grim Solo',
+    type: 'video',
+    width: 'medium'
+  },
+  {
+    id: 9,
+    url: '/image/Gleb.webp',
+    title: 'Gleb',
+    type: 'image',
+    width: 'narrow'
+  },
+  {
+    id: 10,
+    url: '/image/grim_yeam_video.mp4',
+    title: 'Grim Team',
+    type: 'video',
+    width: 'wide'
+  },
+  {
+    id: 11,
+    url: '/image/KonstantinKuz.webp',
+    title: 'Konstantin',
+    type: 'image',
+    width: 'narrow'
+  },
+  {
+    id: 12,
+    url: '/image/grim1.mp4',
+    title: 'Grim Highlight',
+    type: 'video',
+    width: 'medium'
+  },
+  {
+    id: 13,
+    url: '/image/MaryaPon.webp',
+    title: 'Marya',
+    type: 'image',
+    width: 'narrow'
+  },
+  {
+    id: 14,
+    url: '/image/TatyanaKr.webp',
+    title: 'Tatyana',
+    type: 'image',
+    width: 'narrow'
+  },
+  {
+    id: 15,
+    url: '/image/VV.webp',
+    title: 'Valery Voloshin',
+    type: 'image',
+    width: 'medium'
+  },
+  {
+    id: 16,
+    url: '/image/VeronikaLis.webp',
+    title: 'Veronika',
+    type: 'image',
+    width: 'narrow'
+  },
+  {
+    id: 17,
+    url: '/image/baraban.webp',
+    title: 'Drums',
+    type: 'image',
+    width: 'wide'
+  },
 ];
 
 export const TIMELINE_DATA: TimelineItem[] = [
@@ -79,10 +163,14 @@ export const TIMELINE_DATA: TimelineItem[] = [
 ];
 
 export const WHY_VISIT_IMAGES: WhyVisitImage[] = [
-  { id: 1, url: 'https://images.unsplash.com/photo-1470229722913-7c0d2dbbafd3?q=80&w=600&auto=format&fit=crop', caption: 'Живое Выступление' },
-  { id: 2, url: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=600&auto=format&fit=crop', caption: 'Энергия' },
-  { id: 3, url: 'https://images.unsplash.com/photo-1459749411177-0473ef716175?q=80&w=600&auto=format&fit=crop', caption: 'Атмосфера' },
-  { id: 4, url: 'https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?q=80&w=600&auto=format&fit=crop', caption: 'Свет' },
+  { id: 1, url: '/image/фото1конц.jpg', caption: 'Живое Выступление' },
+  { id: 2, url: '/image/фото2бараб.jpg', caption: 'Энергия' },
+  { id: 3, url: '/image/фото3бар.jpg', caption: 'Атмосфера' },
+  { id: 4, url: '/image/фото4бар.jpg', caption: 'Свет' },
+  { id: 5, url: '/image/фото5бар.jpg', caption: 'Драйв' },
+  { id: 6, url: '/image/фото6бар.jpg', caption: 'Ритм' },
+  { id: 7, url: '/image/фото7бар.jpg', caption: 'Шоу' },
+  { id: 8, url: '/image/фото8бар.jpg', caption: 'Эмоции' },
 ];
 
 export const TRACKLIST_DATA: TrackItem[] = [

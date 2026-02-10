@@ -32,7 +32,7 @@ const Collective: React.FC = () => {
       name: 'Мария Пономарева',
       role: 'Участник',
       description: 'Перкуссия и ритм',
-      photoUrl: '/image/MaryaPon.webp'
+      photoUrl: '/image/maria.jpg'
     },
     {
       id: 4,

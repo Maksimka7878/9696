@@ -79,6 +79,7 @@ const Hero: React.FC = () => {
           <img
             src="/voloshin-logo.svg"
             alt="Voloshin logo"
+            fetchPriority="high"
             className="w-80 md:w-[28rem] lg:w-[36rem] xl:w-[42rem] drop-shadow-[0_0_25px_rgba(0,0,0,0.35)]"
           />
         </div>

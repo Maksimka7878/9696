@@ -9,32 +9,45 @@ const Gallery: React.FC = () => {
   const [trackWidth, setTrackWidth] = useState(0);
 
   // Handle Scroll Progress
+  // Handle Scroll Progress
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      if (!sectionRef.current) return;
-      const section = sectionRef.current;
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      const viewportHeight = window.innerHeight;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (!sectionRef.current) {
+            ticking = false;
+            return;
+          }
+          const section = sectionRef.current;
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          const viewportHeight = window.innerHeight;
 
-      // Distance scrolled into the section
-      const scrollTop = window.scrollY;
-      const distance = scrollTop - sectionTop;
+          // Distance scrolled into the section
+          const scrollTop = window.scrollY;
+          const distance = scrollTop - sectionTop;
 
-      // Total scrollable distance: section height minus one viewport
-      const maxDistance = sectionHeight - viewportHeight;
+          // Total scrollable distance: section height minus one viewport
+          const maxDistance = sectionHeight - viewportHeight;
 
-      let progress = 0;
-      if (distance >= 0 && maxDistance > 0) {
-        progress = distance / maxDistance;
-      } else if (distance < 0) {
-        progress = 0;
-      } else if (distance > maxDistance) {
-        progress = 1;
+          let progress = 0;
+          if (distance >= 0 && maxDistance > 0) {
+            progress = distance / maxDistance;
+          } else if (distance < 0) {
+            progress = 0;
+          } else if (distance > maxDistance) {
+            progress = 1;
+          }
+
+          // Clamp between 0 and 1
+          setScrollProgress(Math.min(1, Math.max(0, progress)));
+          ticking = false;
+        });
+
+        ticking = true;
       }
-
-      // Clamp between 0 and 1
-      setScrollProgress(Math.min(1, Math.max(0, progress)));
     };
 
     window.addEventListener('scroll', handleScroll);
