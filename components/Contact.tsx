@@ -11,8 +11,8 @@ const Contact: React.FC = () => {
               БУКИНГ & <br /><span className="text-brand-accent">КОНТАКТЫ</span>
             </h2>
             <p className="text-gray-400 mb-8">
-              Доступны для фестивалей, корпоративных мероприятий и частных шоу.
-              Grimerka96 приносит шум.
+              Гримерка 96 — студия Валерия Волошина. Доступны для фестивалей, корпоративных мероприятий и частных шоу.
+              Барабанное мультимедиа шоу с 1996 года.
             </p>
 
             <div className="space-y-6">
@@ -75,7 +75,8 @@ const Contact: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 pt-8 border-t border-white/10 text-center text-gray-600 text-sm">
-        <p>© 2025 GRIMERKA96. ВСЕ ПРАВА ЗАЩИЩЕНЫ. СОЗДАНО ДЛЯ АНДЕГРАУНДА.</p>
+        <p>© 2026 ГРИМЕРКА96 — СТУДИЯ ВАЛЕРИЯ ВОЛОШИНА. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</p>
+        <p className="text-gray-700 text-xs mt-2">Гримерка 96 | Grimerka96 | Барабанное шоу Валерия Волошина | Нижний Новгород</p>
       </div>
     </section>
   );

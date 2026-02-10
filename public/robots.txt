@@ -1,21 +1,12 @@
-# robots.txt для Grimerka96
+# robots.txt для Гримерка 96 (Grimerka96)
 
 User-agent: *
 Allow: /
 
 # Запретить индексацию служебных файлов
 Disallow: /node_modules/
-Disallow: /*.json$
 Disallow: /vite.config.ts
 Disallow: /tsconfig.json
 
-# Разрешить индексацию основных страниц
-Allow: /
-Allow: /index.html
-
-# Sitemap (если будет создан)
+# Sitemap
 Sitemap: https://9696-opal.vercel.app/sitemap.xml
-
-# Crawl-delay для вежливости
-Crawl-delay: 1
-

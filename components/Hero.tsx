@@ -91,10 +91,11 @@ const Hero: React.FC = () => {
             </div>
             <span className="text-yellow-300 text-2xl md:text-[3rem] lg:text-[3.2rem] tracking-tight">96</span>
           </h1>
+          <span className="sr-only">Гримерка 96 — Барабанное шоу студии Валерия Волошина. Официальный сайт барабанного мультимедиа шоу Grimerka96.</span>
         </div>
 
         <p className="text-gray-200 text-lg md:text-xl max-w-2xl mx-auto mb-3 md:mb-6 font-light leading-relaxed drop-shadow-lg animate-fadeIn px-2" style={{ animationDelay: '0.3s' }}>
-          Завораживающее барабанное мультимедиа Show
+          Завораживающее барабанное мультимедиа шоу студии Валерия Волошина
         </p>
 
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center animate-fadeIn" style={{ animationDelay: '0.6s' }}>

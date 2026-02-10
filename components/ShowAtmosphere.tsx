@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useRef, useCallback } from 'react';
 import { Play } from 'lucide-react';
 
 const ShowAtmosphere: React.FC = () => {
   const [isPlaying, setIsPlaying] = React.useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlay = useCallback(() => {
+    setIsPlaying(true);
+    // Start muted for autoplay compatibility, then unmute after play begins
+    setTimeout(() => {
+      if (videoRef.current) {
+        videoRef.current.play().then(() => {
+          if (videoRef.current) videoRef.current.muted = false;
+        }).catch(() => {
+          // If unmuted play fails, keep muted
+          if (videoRef.current) {
+            videoRef.current.muted = true;
+            videoRef.current.play().catch(() => { });
+          }
+        });
+      }
+    }, 100);
+  }, []);
 
   return (
     <section className="py-24 bg-[#1f0d2e] relative overflow-hidden">
@@ -35,11 +54,14 @@ const ShowAtmosphere: React.FC = () => {
 
             {isPlaying ? (
               <video
+                ref={videoRef}
                 width="100%"
                 height="100%"
                 controls
                 autoPlay
-                preload="none"
+                muted
+                playsInline
+                preload="metadata"
                 poster="/image/preview.webp"
                 className="w-full h-full object-cover"
               >
@@ -52,7 +74,7 @@ const ShowAtmosphere: React.FC = () => {
                 <div className="absolute inset-0">
                   <img
                     src="/image/preview.webp"
-                    alt="Concert Atmosphere"
+                    alt="Гримерка 96 барабанное шоу — видео выступления студии Валерия Волошина"
                     className="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity duration-700"
                   />
                   {/* Overlay Gradient for depth */}
@@ -62,7 +84,7 @@ const ShowAtmosphere: React.FC = () => {
                 {/* Play Button */}
                 <div
                   className="absolute inset-0 flex items-center justify-center cursor-pointer"
-                  onClick={() => setIsPlaying(true)}
+                  onClick={handlePlay}
                 >
                   <div className="relative w-24 h-24 flex items-center justify-center group/btn">
                     {/* Ripple Effect */}

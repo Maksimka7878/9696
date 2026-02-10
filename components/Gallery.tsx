@@ -144,13 +144,32 @@ const Gallery: React.FC = () => {
               <div
                 key={item.id}
                 className={`flex-shrink-0 relative group rounded-[2rem] overflow-hidden h-[60vh] ${sizeClass} shadow-[0_20px_50px_rgba(0,0,0,0.8)] border border-white/10 transition-transform duration-500 hover:scale-[1.02]`}
+                onMouseEnter={(e) => {
+                  const video = e.currentTarget.querySelector('video');
+                  if (video) video.play().catch(() => { });
+                }}
+                onMouseLeave={(e) => {
+                  const video = e.currentTarget.querySelector('video');
+                  if (video) { video.pause(); video.currentTime = 0; }
+                }}
               >
-                <img
-                  src={item.url}
-                  alt={item.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover filter brightness-[0.8] contrast-125 group-hover:brightness-100 transition-all duration-700"
-                />
+                {item.type === 'video' ? (
+                  <video
+                    src={item.url}
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover filter brightness-[0.8] contrast-125 group-hover:brightness-100 transition-all duration-700"
+                  />
+                ) : (
+                  <img
+                    src={item.url}
+                    alt={item.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover filter brightness-[0.8] contrast-125 group-hover:brightness-100 transition-all duration-700"
+                  />
+                )}
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-accent/10 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
@@ -158,7 +177,7 @@ const Gallery: React.FC = () => {
                 {/* Play Button */}
                 {item.type === 'video' && (
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="w-24 h-24 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/40 shadow-[0_0_30px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-500">
+                    <div className="w-24 h-24 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/40 shadow-[0_0_30px_rgba(255,255,255,0.2)] group-hover:scale-110 group-hover:opacity-0 transition-all duration-500">
                       <Play className="w-10 h-10 text-white ml-2 fill-white" />
                     </div>
                   </div>

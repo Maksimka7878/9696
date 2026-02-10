@@ -17,7 +17,9 @@ import FAQ from './components/FAQ';
 const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-brand-black selection:bg-brand-accent selection:text-white">
-      <Navbar />
+      <header>
+        <Navbar />
+      </header>
       <main>
         <Hero />
         <About />
@@ -30,8 +32,10 @@ const App: React.FC = () => {
         <Leader />
         <FAQ />
         <Reward />
-        <Contact />
       </main>
+      <footer>
+        <Contact />
+      </footer>
     </div>
   );
 };
